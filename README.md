@@ -1,64 +1,50 @@
-# NLP_homework
+# NLP Homework
 
-輔仁大學 王冠云老師 - 自然語言處理課程作業
+輔仁大學 資管三 — 自然語言處理（114 學年度第 2 學期）
 
-## 📚 課程內容
+授課教師：王冠云 ｜ Friday D2,D3,D4 / BS440
+
+## 課程進度與作業
+
+| 週次 | 主題 | 資料夾 | 狀態 |
+|:----:|------|--------|:----:|
+| 1 | Course Orientation / Environment Setup | — | — |
+| 2 | Basic Linguistics | — | — |
+| 3 | NLP Basics | [`week3/`](./week3/) | ✅ |
+| 4 | Lexical and Grammar | `week04/` | |
+| 5 | Semantics (N-gram, TF-IDF, Embeddings) | `week05/` | |
+| 6 | Implementation & Spring Vacation | `week06/` | |
+| 7 | Classification | `week07/` | |
+| 8 | Mid-term Report | `week08/` | |
+| 9 | Information Extraction (Regex, NER) | `week09/` | |
+| 10 | Implementation & Labor Day | `week10/` | |
+| 11 | Topic Modeling (LDA, K-Means) | `week11/` | |
+| 12 | Visualizing Text Data | `week12/` | |
+| 13 | Transformers and Applications | `week13/` | |
+| 14 | Natural Language Understanding | `week14/` | |
+| 15 | Generative AI and LLM | `week15/` | |
+| 16 | Final Report | `week16/` | |
+
+## 已完成的作業
 
 ### Week 3: NLP Basics (2026.03.13)
+- TronClass 課堂練習：NLTK 斷句、速度比較、斷詞差異、中文歧義分析
+- Assignment 1：中文斷詞與詞性標註（jieba vs spaCy 比較）
 
-本週學習 NLP 基礎技術，包含：
+### Assignment 1: Tokenization & POS Tagging
+- 檔案：[`A1_tokenization_pos.ipynb`](./A1_tokenization_pos.ipynb) / [`A1_tokenization_pos.pdf`](./A1_tokenization_pos.pdf)
+- 繳交期限：2026/03/27 08:30
 
-1. **斷句（Sentence Splitting）** - NLTK Punkt Tokenizer
-2. **速度比較** - NLTK vs spaCy 效能分析
-3. **斷詞（Tokenization）** - 詞彙切分差異
-4. **中文歧義分析** - 理解中文 NLP 的挑戰
+## 環境
 
-📂 [查看 Week 3 完整內容](./week3/)
-
----
-
-## 🚀 快速開始
+- Python >= 3.9
+- 套件管理：[uv](https://github.com/astral-sh/uv)（推薦）
 
 ```bash
-# 進入 week3 資料夾
-cd week3
-
-# 執行各題示範程式
-python3 question_01_dividing_sentences/demo.py
-python3 question_02_compare_speed/compare_speed.py
-python3 question_03_tokens_comparison/compare_tokens.py
-python3 question_04_chinese_ambiguity/analyze_ambiguity.py
+uv venv
+uv pip install nltk jieba spacy
 ```
 
----
+## 教科書
 
-## 📖 學習資源
-
-- [Week 3 詳細說明](./week3/README.md)
-- [Week 3 快速參考卡](./week3/QUICK_REFERENCE.md)
-- [課程講義 PDF](./03_NLP_Basics_20260313.pdf)
-
----
-
-## 🛠 環境需求
-
-```bash
-# 安裝 NLTK
-pip install nltk
-
-# 安裝 spaCy（可選）
-pip install spacy
-python -m spacy download en_core_web_sm
-```
-
-或使用 uv（推薦）：
-```bash
-uv pip install nltk spacy
-uv run python -m spacy download en_core_web_sm
-```
-
----
-
-**學校：** 輔仁大學資訊管理學系
-**老師：** 王冠云
-**日期：** 2026.03.13
+Antić, Z., & Chakravarty, S. (2024). *Python Natural Language Processing Cookbook*, 2nd Edition. Packt.
