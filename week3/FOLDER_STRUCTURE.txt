@@ -1,0 +1,20 @@
+week3/
+.
+FOLDER_STRUCTURE.txt
+QUICK_REFERENCE.md
+README.md
+data
+  data/sherlock_holmes_1_short.txt
+  data/sherlock_holmes_full.txt
+question_01_dividing_sentences
+  question_01_dividing_sentences/answer.md
+  question_01_dividing_sentences/demo.py
+question_02_compare_speed
+  question_02_compare_speed/answer.md
+  question_02_compare_speed/compare_speed.py
+question_03_tokens_comparison
+  question_03_tokens_comparison/answer.md
+  question_03_tokens_comparison/compare_tokens.py
+question_04_chinese_ambiguity
+  question_04_chinese_ambiguity/analyze_ambiguity.py
+  question_04_chinese_ambiguity/answer.md
