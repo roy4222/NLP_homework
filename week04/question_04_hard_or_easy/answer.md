@@ -1,0 +1,3 @@
+1. Group B is more difficult for dependency parsing.
+
+2. Group B sentences are colloquial and short, frequently omitting subjects, objects, or verbs, resulting in incomplete grammatical structures. For example, "明天早上八點。" has no verb, "有點奇怪。" omits the subject, and "忘記帶了。" omits both the subject and the object. Dependency parsing relies on grammatical relationships (subject-verb-object) to construct a syntax tree — when these core components are missing, the parser struggles to establish correct dependencies. In contrast, Group A sentences have complete structures with clear subjects, verbs, and objects, making them straightforward for the parser to analyze.
