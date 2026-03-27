@@ -7,7 +7,7 @@
 
 ## 課程主題
 
-本週學習如何把文字轉成數值向量（text representation），並用不同方法在 Rotten Tomatoes 電影評論資料集上做情感分類（正面/負面），比較各方法的效果差異。
+本週學習如何把文字轉成數值向量（text representation），並用不同方法做情感分類與語意相似度比較。
 
 ---
 
@@ -16,9 +16,12 @@
 ```
 week05/
 ├── README.md
-├── 05_Semantics_20260327.pdf        # 課程講義
-├── 02_comparison.py                 # 作業 02: 五種方法比較
-└── 03_challenge_cohere.py           # 作業 03: Cohere LLM embeddings
+├── 05_Semantics_20260327.pdf              # 課程講義
+├── 02_comparison.py                       # 討論 02: 五種方法情感分類比較
+├── 03_challenge_cohere.py                 # 討論 03: Cohere LLM embeddings 挑戰
+├── A2_representation_embeddings.ipynb     # 作業 A2: TF-IDF vs Embeddings（中文）
+├── A2_representation_embeddings.pdf       # 作業 A2 匯出 PDF（繳交用）
+└── similarity_comparison.png              # Heatmap 視覺化比較圖
 ```
 
 ---
@@ -75,9 +78,11 @@ week05/
 
 ---
 
-## 作業結果
+## 課堂討論
 
-### 02_Comparison — 五種方法比較
+### 02_Comparison — 五種方法情感分類比較
+
+在 Rotten Tomatoes 電影評論上比較五種 text representation 搭配 LogisticRegression 的分類效果：
 
 | Method | Accuracy |
 |--------|----------|
@@ -99,9 +104,36 @@ LLM embeddings 大幅勝出，因為預訓練模型在海量語料上學到了�
 
 ---
 
+## 作業 A2: Text Representation — TF-IDF & Embeddings（中文）
+
+### 作業內容
+
+用中文資料比較 TF-IDF 和 Sentence Embeddings 兩種文字表示法的 cosine similarity 差異。
+
+### 做了什麼
+
+1. **擴充語料**：從 4 句擴展到 8 句中文，涵蓋半導體、NLP、教育等主題
+2. **TF-IDF**：用 jieba 斷詞 + `TfidfVectorizer`，印出 top 5 關鍵詞與相似度矩陣
+3. **Sentence Embeddings**：用 `paraphrase-multilingual-MiniLM-L12-v2`（384 維）算相似度矩陣
+4. **視覺化**：兩張 heatmap 並排比較
+5. **關鍵配對分析**：挑 6 組文件對，比較兩種方法的分數差異
+6. **Discussion**：分析為什麼 embeddings 更好、TF-IDF 的局限與優勢
+
+### 核心發現
+
+| Document Pair | TF-IDF | Embedding |
+|---|---|---|
+| 半導體 vs 台積電（同主題不同詞） | 0.143 | **0.671** |
+| NLP App vs 文本分類（相關主題） | 0.174 | **0.561** |
+| LLM 教育 vs 教育（都談教育） | 0.157 | **0.381** |
+
+結論：**Sentence embeddings 在語意相似度任務上明顯優於 TF-IDF**，因為它能理解「用不同詞講同一件事」。
+
+---
+
 ## 使用的套件
 
 ```bash
-uv pip install datasets scikit-learn spacy gensim numpy pandas cohere
+uv pip install datasets scikit-learn spacy gensim numpy pandas cohere sentence-transformers jieba matplotlib
 python -m spacy download en_core_web_sm
 ```
