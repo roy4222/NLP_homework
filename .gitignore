@@ -2,3 +2,19 @@
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# final_project heavy artifacts
+final_project/data/hf_cache/
+final_project/data/raw/
+final_project/models/**/checkpoint-*/
+final_project/models/**/*.pt
+final_project/models/**/*.safetensors
+.hf_token
+.env
+
+# stray file at repo root (week05 has its own copy)
+/similarity_comparison.png
