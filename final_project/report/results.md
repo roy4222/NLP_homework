@@ -2,7 +2,7 @@
 
 | Method | Micro-F1 | Macro-F1 | Precision | Recall | Hamming Loss |
 |---|---:|---:|---:|---:|---:|
-| Rule-based | 0.578 | 0.409 | 0.444 | 0.831 | 0.067 |
+| Rule-based | 0.600 | 0.426 | 0.470 | 0.831 | 0.062 |
 | TF-IDF + SVM | 0.760 | 0.324 | 0.851 | 0.686 | 0.025 |
 
 ## Per-label F1
@@ -16,7 +16,6 @@
 | `negligent_death` | 5 | 0.148 |
 | `contract_breach` | 2 | 0.167 |
 | `hit_and_run` | 2 | 0.190 |
-| `intimidation` | 5 | 0.233 |
 | `injury` | 14 | 0.283 |
 | `document_forgery` | 1 | 0.333 |
 | `aggravated_theft` | 3 | 0.333 |
@@ -24,6 +23,7 @@
 | `property_damage` | 6 | 0.357 |
 | `sales_defect` | 5 | 0.462 |
 | `tort_damages` | 30 | 0.481 |
+| `intimidation` | 5 | 0.556 |
 | `negligent_injury` | 20 | 0.622 |
 | `defamation` | 6 | 0.625 |
 | `fraud` | 12 | 0.690 |

@@ -393,8 +393,7 @@
     ],
     "predicted": [
       "injury",
-      "negligent_injury",
-      "intimidation"
+      "negligent_injury"
     ],
     "details": [
       {
@@ -425,21 +424,6 @@
         ],
         "evidence": [
           "沒注意"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       }
     ]
@@ -1088,28 +1072,11 @@
       "injury"
     ],
     "predicted": [
-      "intimidation",
       "injury",
+      "intimidation",
       "property_damage"
     ],
     "details": [
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.75,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "威脅",
-          "害怕",
-          "小心"
-        ]
-      },
       {
         "id": "injury",
         "name_zh": "傷害",
@@ -1124,6 +1091,22 @@
         "evidence": [
           "傷害",
           "打"
+        ]
+      },
+      {
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
+        "confidence": 0.65,
+        "supporting_laws": [
+          {
+            "law": "刑法",
+            "article": "305"
+          }
+        ],
+        "evidence": [
+          "威脅",
+          "害怕"
         ]
       },
       {
@@ -1472,8 +1455,7 @@
     ],
     "predicted": [
       "injury",
-      "property_damage",
-      "intimidation"
+      "property_damage"
     ],
     "details": [
       {
@@ -1506,21 +1488,6 @@
         "evidence": [
           "損壞",
           "破壞"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       }
     ]
@@ -3288,8 +3255,7 @@
     ],
     "predicted": [
       "dui_public_danger",
-      "injury",
-      "intimidation"
+      "injury"
     ],
     "details": [
       {
@@ -3321,21 +3287,6 @@
         ],
         "evidence": [
           "打"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       }
     ]
@@ -4081,26 +4032,8 @@
     "gold": [
       "unjust_enrichment"
     ],
-    "predicted": [
-      "intimidation"
-    ],
-    "details": [
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
-        ]
-      }
-    ]
+    "predicted": [],
+    "details": []
   },
   {
     "id": "synthetic-655",
@@ -4548,7 +4481,6 @@
     ],
     "predicted": [
       "tort_damages",
-      "intimidation",
       "contract_breach"
     ],
     "details": [
@@ -4575,21 +4507,6 @@
           "損害",
           "損害賠償",
           "賠償"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       },
       {
@@ -4973,8 +4890,7 @@
       "injury"
     ],
     "predicted": [
-      "injury",
-      "intimidation"
+      "injury"
     ],
     "details": [
       {
@@ -4992,21 +4908,6 @@
           "傷害",
           "受傷",
           "流血"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       }
     ]
@@ -5441,8 +5342,7 @@
     ],
     "predicted": [
       "theft",
-      "injury",
-      "intimidation"
+      "injury"
     ],
     "details": [
       {
@@ -5474,21 +5374,6 @@
         ],
         "evidence": [
           "打"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       }
     ]
@@ -5526,8 +5411,7 @@
       "tort_damages"
     ],
     "predicted": [
-      "dui_public_danger",
-      "intimidation"
+      "dui_public_danger"
     ],
     "details": [
       {
@@ -5544,21 +5428,6 @@
         "evidence": [
           "酒後",
           "酒後駕車"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       }
     ]
@@ -6177,8 +6046,7 @@
     "predicted": [
       "dui_public_danger",
       "injury",
-      "property_damage",
-      "intimidation"
+      "property_damage"
     ],
     "details": [
       {
@@ -6226,21 +6094,6 @@
         ],
         "evidence": [
           "損壞"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       }
     ]
@@ -6502,8 +6355,7 @@
     ],
     "predicted": [
       "theft",
-      "negligent_injury",
-      "intimidation"
+      "negligent_injury"
     ],
     "details": [
       {
@@ -6534,21 +6386,6 @@
         ],
         "evidence": [
           "沒注意"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       }
     ]
@@ -6806,8 +6643,7 @@
     ],
     "predicted": [
       "dui_public_danger",
-      "injury",
-      "intimidation"
+      "injury"
     ],
     "details": [
       {
@@ -6840,21 +6676,6 @@
         ],
         "evidence": [
           "受傷"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       }
     ]
@@ -6984,8 +6805,7 @@
       "dui_public_danger"
     ],
     "predicted": [
-      "dui_public_danger",
-      "intimidation"
+      "dui_public_danger"
     ],
     "details": [
       {
@@ -7001,21 +6821,6 @@
         ],
         "evidence": [
           "醉"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       }
     ]
@@ -7201,8 +7006,7 @@
     ],
     "predicted": [
       "theft",
-      "aggravated_theft",
-      "intimidation"
+      "aggravated_theft"
     ],
     "details": [
       {
@@ -7233,21 +7037,6 @@
         ],
         "evidence": [
           "侵入住宅"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       }
     ]
@@ -8021,8 +7810,7 @@
     ],
     "predicted": [
       "theft",
-      "injury",
-      "intimidation"
+      "injury"
     ],
     "details": [
       {
@@ -8055,21 +7843,6 @@
         ],
         "evidence": [
           "打"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       }
     ]
@@ -8245,8 +8018,7 @@
     ],
     "predicted": [
       "dui_public_danger",
-      "injury",
-      "intimidation"
+      "injury"
     ],
     "details": [
       {
@@ -8281,21 +8053,6 @@
         ],
         "evidence": [
           "受傷"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       }
     ]
@@ -8662,8 +8419,7 @@
       "dui_public_danger"
     ],
     "predicted": [
-      "dui_public_danger",
-      "intimidation"
+      "dui_public_danger"
     ],
     "details": [
       {
@@ -8680,21 +8436,6 @@
         "evidence": [
           "酒精濃度"
         ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
-        ]
       }
     ]
   },
@@ -8706,8 +8447,7 @@
     "predicted": [
       "injury",
       "negligent_injury",
-      "negligent_death",
-      "intimidation"
+      "negligent_death"
     ],
     "details": [
       {
@@ -8753,21 +8493,6 @@
         ],
         "evidence": [
           "過失"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       }
     ]
@@ -8929,8 +8654,7 @@
       "dui_public_danger",
       "negligent_injury",
       "injury",
-      "negligent_death",
-      "intimidation"
+      "negligent_death"
     ],
     "details": [
       {
@@ -8996,21 +8720,6 @@
         "evidence": [
           "過失"
         ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
-        ]
       }
     ]
   },
@@ -9047,8 +8756,7 @@
       "dui_public_danger"
     ],
     "predicted": [
-      "dui_public_danger",
-      "intimidation"
+      "dui_public_danger"
     ],
     "details": [
       {
@@ -9065,21 +8773,6 @@
         "evidence": [
           "酒精濃度",
           "開車"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       }
     ]
@@ -9469,7 +9162,6 @@
     "predicted": [
       "injury",
       "property_damage",
-      "intimidation",
       "sales_defect"
     ],
     "details": [
@@ -9501,21 +9193,6 @@
         ],
         "evidence": [
           "破壞"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       },
       {
@@ -9556,7 +9233,7 @@
         "id": "intimidation",
         "name_zh": "恐嚇",
         "name_en": "intimidation",
-        "confidence": 0.75,
+        "confidence": 0.65,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -9565,7 +9242,6 @@
         ],
         "evidence": [
           "威脅",
-          "小心",
           "恐嚇"
         ]
       }
@@ -9578,7 +9254,6 @@
     ],
     "predicted": [
       "dui_public_danger",
-      "intimidation",
       "unjust_enrichment"
     ],
     "details": [
@@ -9596,21 +9271,6 @@
         "evidence": [
           "酒後",
           "醉"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       },
       {
@@ -9637,8 +9297,7 @@
     ],
     "predicted": [
       "injury",
-      "property_damage",
-      "intimidation"
+      "property_damage"
     ],
     "details": [
       {
@@ -9669,21 +9328,6 @@
         ],
         "evidence": [
           "破壞"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       }
     ]
@@ -9788,8 +9432,7 @@
       "tort_damages"
     ],
     "predicted": [
-      "hit_and_run",
-      "intimidation"
+      "hit_and_run"
     ],
     "details": [
       {
@@ -9807,21 +9450,6 @@
           "肇事",
           "肇事逃逸",
           "逃逸"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       }
     ]
@@ -9860,8 +9488,7 @@
       "theft"
     ],
     "predicted": [
-      "theft",
-      "intimidation"
+      "theft"
     ],
     "details": [
       {
@@ -9879,21 +9506,6 @@
           "偷",
           "偷竊",
           "拿走"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       }
     ]
@@ -9941,8 +9553,7 @@
     "predicted": [
       "dui_public_danger",
       "hit_and_run",
-      "property_damage",
-      "intimidation"
+      "property_damage"
     ],
     "details": [
       {
@@ -9988,21 +9599,6 @@
         ],
         "evidence": [
           "損壞"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "小心"
         ]
       }
     ]

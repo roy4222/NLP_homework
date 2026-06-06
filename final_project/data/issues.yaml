@@ -120,7 +120,7 @@
     - law: 刑法
       article: "305"
   aliases: [恐嚇, 威脅]
-  keywords: [威脅, 恐嚇, 要殺, 害怕, 讓我好看, 小心, 小心家人]
+  keywords: [威脅, 恐嚇, 要殺, 害怕, 讓我好看, 小心家人]
 
 - id: tort_damages
   name_zh: 侵權行為損害賠償
