@@ -6,7 +6,7 @@
     - law: 刑法
       article: "185-3"
   aliases: [酒駕, 酒後駕車, 公共危險]
-  keywords: [酒測, 酒精濃度, 醉, 開車, 機車]
+  keywords: [酒測, 酒精濃度, 醉, 開車, 酒後, 酒駕]
 
 - id: theft
   name_zh: 竊盜
@@ -46,7 +46,7 @@
     - law: 刑法
       article: "277"
   aliases: [傷害, 打傷, 毆打]
-  keywords: [打, 受傷, 驗傷, 骨折]
+  keywords: [打, 揍, 被揍, 毆, 受傷, 驗傷, 骨折, 好痛, 流血, 瘀青]
 
 - id: negligent_injury
   name_zh: 過失傷害
@@ -56,7 +56,7 @@
     - law: 刑法
       article: "284"
   aliases: [過失傷害, 車禍受傷]
-  keywords: [車禍, 不小心, 過失, 撞傷]
+  keywords: [車禍, 過失, 撞傷, 撞倒, 沒注意]
 
 - id: negligent_death
   name_zh: 過失致死
@@ -76,7 +76,7 @@
     - law: 刑法
       article: "185-4"
   aliases: [肇事逃逸, 撞人逃逸]
-  keywords: [逃逸, 離開現場, 肇事, 撞到人]
+  keywords: [逃逸, 離開現場, 肇事, 撞到人, 逃走, 開車逃走, 沒有停下]
 
 - id: property_damage
   name_zh: 毀損
@@ -110,7 +110,7 @@
     - law: 民法
       article: "195"
   aliases: [妨害名譽, 誹謗, 公然侮辱]
-  keywords: [辱罵, 爆料, 貼文, 名譽, 社群]
+  keywords: [辱罵, 爆料, 貼文, 發文, 名譽, 社群, 罵我, 說我]
 
 - id: intimidation
   name_zh: 恐嚇
@@ -120,7 +120,7 @@
     - law: 刑法
       article: "305"
   aliases: [恐嚇, 威脅]
-  keywords: [威脅, 恐嚇, 要殺, 害怕]
+  keywords: [威脅, 恐嚇, 要殺, 害怕, 讓我好看, 小心, 小心家人]
 
 - id: tort_damages
   name_zh: 侵權行為損害賠償
@@ -154,7 +154,7 @@
     - law: 民法
       article: "179"
   aliases: [不當得利, 無法律上原因]
-  keywords: [多收, 誤匯, 返還, 得利]
+  keywords: [多收, 誤匯, 匯錯, 匯到, 帳戶, 陌生人, 返還, 還給我, 拒絕把錢還, 得利]
 
 - id: contract_breach
   name_zh: 契約違約 / 債務不履行
@@ -166,7 +166,7 @@
     - law: 民法
       article: "227"
   aliases: [違約, 債務不履行, 契約不履行]
-  keywords: [合約, 契約, 沒履行, 遲延, 解約]
+  keywords: [合約, 契約, 簽約, 沒履行, 依約, 訂金, 完成工作, 廠商, 遲延, 解約]
 
 - id: sales_defect
   name_zh: 買賣瑕疵
@@ -180,7 +180,7 @@
     - law: 民法
       article: "360"
   aliases: [物之瑕疵, 買賣瑕疵]
-  keywords: [瑕疵, 退貨, 減價, 保固]
+  keywords: [瑕疵, 退貨, 退錢, 減價, 保固, 二手車, 引擎, 重大問題, 修理]
 
 - id: inheritance
   name_zh: 繼承

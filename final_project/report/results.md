@@ -2,7 +2,7 @@
 
 | Method | Micro-F1 | Macro-F1 | Precision | Recall | Hamming Loss |
 |---|---:|---:|---:|---:|---:|
-| Rule-based | 0.589 | 0.419 | 0.457 | 0.831 | 0.064 |
+| Rule-based | 0.578 | 0.409 | 0.444 | 0.831 | 0.067 |
 | TF-IDF + SVM | 0.760 | 0.324 | 0.851 | 0.686 | 0.025 |
 
 ## Per-label F1
@@ -14,22 +14,22 @@
 | `inheritance` | 0 | 0.000 |
 | `marital_property` | 1 | 0.000 |
 | `negligent_death` | 5 | 0.148 |
-| `contract_breach` | 2 | 0.182 |
+| `contract_breach` | 2 | 0.167 |
 | `hit_and_run` | 2 | 0.190 |
-| `unjust_enrichment` | 6 | 0.250 |
-| `injury` | 14 | 0.286 |
+| `intimidation` | 5 | 0.233 |
+| `injury` | 14 | 0.283 |
 | `document_forgery` | 1 | 0.333 |
 | `aggravated_theft` | 3 | 0.333 |
+| `unjust_enrichment` | 6 | 0.333 |
 | `property_damage` | 6 | 0.357 |
-| `negligent_injury` | 20 | 0.424 |
+| `sales_defect` | 5 | 0.462 |
 | `tort_damages` | 30 | 0.481 |
-| `intimidation` | 5 | 0.556 |
-| `sales_defect` | 5 | 0.600 |
+| `negligent_injury` | 20 | 0.622 |
 | `defamation` | 6 | 0.625 |
 | `fraud` | 12 | 0.690 |
 | `divorce` | 7 | 0.778 |
 | `theft` | 15 | 0.789 |
-| `dui_public_danger` | 102 | 0.936 |
+| `dui_public_danger` | 102 | 0.943 |
 
 ### TF-IDF + SVM
 
@@ -53,3 +53,4 @@
 | `divorce` | 7 | 0.824 |
 | `negligent_injury` | 20 | 0.865 |
 | `dui_public_danger` | 102 | 0.985 |
+

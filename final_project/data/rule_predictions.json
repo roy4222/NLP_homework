@@ -98,7 +98,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.75,
+        "confidence": 0.65,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -106,7 +106,6 @@
           }
         ],
         "evidence": [
-          "機車",
           "酒測",
           "酒精濃度"
         ]
@@ -257,7 +256,8 @@
     ],
     "predicted": [
       "fraud",
-      "injury"
+      "injury",
+      "unjust_enrichment"
     ],
     "details": [
       {
@@ -291,6 +291,21 @@
         ],
         "evidence": [
           "打"
+        ]
+      },
+      {
+        "id": "unjust_enrichment",
+        "name_zh": "不當得利",
+        "name_en": "unjust enrichment",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "民法",
+            "article": "179"
+          }
+        ],
+        "evidence": [
+          "帳戶"
         ]
       }
     ]
@@ -377,26 +392,11 @@
       "dui_public_danger"
     ],
     "predicted": [
-      "dui_public_danger",
       "injury",
-      "negligent_injury"
+      "negligent_injury",
+      "intimidation"
     ],
     "details": [
-      {
-        "id": "dui_public_danger",
-        "name_zh": "酒駕 / 公共危險",
-        "name_en": "DUI / public danger",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "185-3"
-          }
-        ],
-        "evidence": [
-          "機車"
-        ]
-      },
       {
         "id": "injury",
         "name_zh": "傷害",
@@ -424,39 +424,28 @@
           }
         ],
         "evidence": [
-          "不小心"
+          "沒注意"
+        ]
+      },
+      {
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "刑法",
+            "article": "305"
+          }
+        ],
+        "evidence": [
+          "小心"
         ]
       }
     ]
   },
   {
     "id": "synthetic-348",
-    "gold": [
-      "dui_public_danger"
-    ],
-    "predicted": [
-      "dui_public_danger"
-    ],
-    "details": [
-      {
-        "id": "dui_public_danger",
-        "name_zh": "酒駕 / 公共危險",
-        "name_en": "DUI / public danger",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "185-3"
-          }
-        ],
-        "evidence": [
-          "酒精濃度"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "synthetic-4397",
     "gold": [
       "dui_public_danger"
     ],
@@ -476,7 +465,35 @@
           }
         ],
         "evidence": [
+          "酒後",
+          "酒精濃度"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "synthetic-4397",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ],
+    "details": [
+      {
+        "id": "dui_public_danger",
+        "name_zh": "酒駕 / 公共危險",
+        "name_en": "DUI / public danger",
+        "confidence": 0.75,
+        "supporting_laws": [
+          {
+            "law": "刑法",
+            "article": "185-3"
+          }
+        ],
+        "evidence": [
           "公共危險",
+          "酒後",
           "酒後駕車"
         ]
       }
@@ -539,7 +556,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.75,
+        "confidence": 0.65,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -547,7 +564,6 @@
           }
         ],
         "evidence": [
-          "機車",
           "酒測",
           "酒精濃度"
         ]
@@ -922,10 +938,30 @@
       "sales_defect"
     ],
     "predicted": [
-      "tort_damages",
-      "contract_breach"
+      "contract_breach",
+      "tort_damages"
     ],
     "details": [
+      {
+        "id": "contract_breach",
+        "name_zh": "契約違約 / 債務不履行",
+        "name_en": "contract breach",
+        "confidence": 0.65,
+        "supporting_laws": [
+          {
+            "law": "民法",
+            "article": "226"
+          },
+          {
+            "law": "民法",
+            "article": "227"
+          }
+        ],
+        "evidence": [
+          "合約",
+          "簽約"
+        ]
+      },
       {
         "id": "tort_damages",
         "name_zh": "侵權行為損害賠償",
@@ -948,25 +984,6 @@
         "evidence": [
           "賠償"
         ]
-      },
-      {
-        "id": "contract_breach",
-        "name_zh": "契約違約 / 債務不履行",
-        "name_en": "contract breach",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "民法",
-            "article": "226"
-          },
-          {
-            "law": "民法",
-            "article": "227"
-          }
-        ],
-        "evidence": [
-          "合約"
-        ]
       }
     ]
   },
@@ -976,25 +993,9 @@
       "dui_public_danger"
     ],
     "predicted": [
-      "dui_public_danger",
       "hit_and_run"
     ],
     "details": [
-      {
-        "id": "dui_public_danger",
-        "name_zh": "酒駕 / 公共危險",
-        "name_en": "DUI / public danger",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "185-3"
-          }
-        ],
-        "evidence": [
-          "機車"
-        ]
-      },
       {
         "id": "hit_and_run",
         "name_zh": "肇事逃逸",
@@ -1045,7 +1046,8 @@
       "marital_property"
     ],
     "predicted": [
-      "divorce"
+      "divorce",
+      "unjust_enrichment"
     ],
     "details": [
       {
@@ -1062,6 +1064,21 @@
         "evidence": [
           "離婚"
         ]
+      },
+      {
+        "id": "unjust_enrichment",
+        "name_zh": "不當得利",
+        "name_en": "unjust enrichment",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "民法",
+            "article": "179"
+          }
+        ],
+        "evidence": [
+          "帳戶"
+        ]
       }
     ]
   },
@@ -1071,12 +1088,28 @@
       "injury"
     ],
     "predicted": [
-      "injury",
       "intimidation",
-      "negligent_injury",
+      "injury",
       "property_damage"
     ],
     "details": [
+      {
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
+        "confidence": 0.75,
+        "supporting_laws": [
+          {
+            "law": "刑法",
+            "article": "305"
+          }
+        ],
+        "evidence": [
+          "威脅",
+          "害怕",
+          "小心"
+        ]
+      },
       {
         "id": "injury",
         "name_zh": "傷害",
@@ -1091,37 +1124,6 @@
         "evidence": [
           "傷害",
           "打"
-        ]
-      },
-      {
-        "id": "intimidation",
-        "name_zh": "恐嚇",
-        "name_en": "intimidation",
-        "confidence": 0.65,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "305"
-          }
-        ],
-        "evidence": [
-          "威脅",
-          "害怕"
-        ]
-      },
-      {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "284"
-          }
-        ],
-        "evidence": [
-          "不小心"
         ]
       },
       {
@@ -1421,14 +1423,15 @@
       "unjust_enrichment"
     ],
     "predicted": [
-      "contract_breach"
+      "contract_breach",
+      "unjust_enrichment"
     ],
     "details": [
       {
         "id": "contract_breach",
         "name_zh": "契約違約 / 債務不履行",
         "name_en": "contract breach",
-        "confidence": 0.55,
+        "confidence": 0.65,
         "supporting_laws": [
           {
             "law": "民法",
@@ -1440,7 +1443,23 @@
           }
         ],
         "evidence": [
-          "合約"
+          "合約",
+          "廠商"
+        ]
+      },
+      {
+        "id": "unjust_enrichment",
+        "name_zh": "不當得利",
+        "name_en": "unjust enrichment",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "民法",
+            "article": "179"
+          }
+        ],
+        "evidence": [
+          "帳戶"
         ]
       }
     ]
@@ -1454,7 +1473,7 @@
     "predicted": [
       "injury",
       "property_damage",
-      "negligent_injury"
+      "intimidation"
     ],
     "details": [
       {
@@ -1490,18 +1509,18 @@
         ]
       },
       {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
         "confidence": 0.55,
         "supporting_laws": [
           {
             "law": "刑法",
-            "article": "284"
+            "article": "305"
           }
         ],
         "evidence": [
-          "不小心"
+          "小心"
         ]
       }
     ]
@@ -1712,27 +1731,11 @@
       "dui_public_danger"
     ],
     "predicted": [
-      "dui_public_danger",
       "injury",
+      "dui_public_danger",
       "hit_and_run"
     ],
     "details": [
-      {
-        "id": "dui_public_danger",
-        "name_zh": "酒駕 / 公共危險",
-        "name_en": "DUI / public danger",
-        "confidence": 0.65,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "185-3"
-          }
-        ],
-        "evidence": [
-          "機車",
-          "酒精濃度"
-        ]
-      },
       {
         "id": "injury",
         "name_zh": "傷害",
@@ -1747,6 +1750,21 @@
         "evidence": [
           "傷害",
           "打"
+        ]
+      },
+      {
+        "id": "dui_public_danger",
+        "name_zh": "酒駕 / 公共危險",
+        "name_en": "DUI / public danger",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "刑法",
+            "article": "185-3"
+          }
+        ],
+        "evidence": [
+          "酒精濃度"
         ]
       },
       {
@@ -1805,7 +1823,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.55,
+        "confidence": 0.65,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -1813,6 +1831,7 @@
           }
         ],
         "evidence": [
+          "酒後",
           "酒後駕車"
         ]
       }
@@ -1973,7 +1992,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.75,
+        "confidence": 0.65,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -1981,7 +2000,6 @@
           }
         ],
         "evidence": [
-          "機車",
           "酒精濃度",
           "醉"
         ]
@@ -2031,7 +2049,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.8500000000000001,
+        "confidence": 0.95,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -2039,6 +2057,7 @@
           }
         ],
         "evidence": [
+          "酒後",
           "酒測",
           "酒精濃度",
           "醉",
@@ -2283,7 +2302,7 @@
           }
         ],
         "evidence": [
-          "機車",
+          "酒後",
           "酒精濃度"
         ]
       },
@@ -2353,7 +2372,7 @@
           }
         ],
         "evidence": [
-          "機車",
+          "酒後",
           "酒測",
           "酒精濃度",
           "開車"
@@ -2452,7 +2471,8 @@
     ],
     "predicted": [
       "dui_public_danger",
-      "injury"
+      "injury",
+      "sales_defect"
     ],
     "details": [
       {
@@ -2484,6 +2504,29 @@
         ],
         "evidence": [
           "受傷"
+        ]
+      },
+      {
+        "id": "sales_defect",
+        "name_zh": "買賣瑕疵",
+        "name_en": "sales defect",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "民法",
+            "article": "354"
+          },
+          {
+            "law": "民法",
+            "article": "359"
+          },
+          {
+            "law": "民法",
+            "article": "360"
+          }
+        ],
+        "evidence": [
+          "引擎"
         ]
       }
     ]
@@ -2620,7 +2663,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.8500000000000001,
+        "confidence": 0.75,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -2628,7 +2671,6 @@
           }
         ],
         "evidence": [
-          "機車",
           "酒測",
           "酒精濃度",
           "醉"
@@ -2649,7 +2691,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.55,
+        "confidence": 0.65,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -2657,6 +2699,7 @@
           }
         ],
         "evidence": [
+          "酒後",
           "酒測"
         ]
       }
@@ -2721,7 +2764,8 @@
     ],
     "predicted": [
       "fraud",
-      "document_forgery"
+      "document_forgery",
+      "unjust_enrichment"
     ],
     "details": [
       {
@@ -2752,6 +2796,21 @@
         ],
         "evidence": [
           "偽造"
+        ]
+      },
+      {
+        "id": "unjust_enrichment",
+        "name_zh": "不當得利",
+        "name_en": "unjust enrichment",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "民法",
+            "article": "179"
+          }
+        ],
+        "evidence": [
+          "帳戶"
         ]
       }
     ]
@@ -2789,7 +2848,8 @@
       "fraud"
     ],
     "predicted": [
-      "fraud"
+      "fraud",
+      "unjust_enrichment"
     ],
     "details": [
       {
@@ -2808,6 +2868,21 @@
           "詐騙",
           "騙"
         ]
+      },
+      {
+        "id": "unjust_enrichment",
+        "name_zh": "不當得利",
+        "name_en": "unjust enrichment",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "民法",
+            "article": "179"
+          }
+        ],
+        "evidence": [
+          "帳戶"
+        ]
       }
     ]
   },
@@ -2825,7 +2900,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.75,
+        "confidence": 0.8500000000000001,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -2833,6 +2908,7 @@
           }
         ],
         "evidence": [
+          "酒後",
           "酒後駕車",
           "酒測",
           "酒精濃度"
@@ -2886,7 +2962,7 @@
         ],
         "evidence": [
           "公共危險",
-          "機車",
+          "酒後",
           "酒測",
           "酒精濃度"
         ]
@@ -2973,7 +3049,7 @@
         ],
         "evidence": [
           "公共危險",
-          "機車",
+          "酒後",
           "酒測",
           "酒精濃度"
         ]
@@ -3065,28 +3141,12 @@
       "negligent_injury"
     ],
     "predicted": [
-      "dui_public_danger",
       "injury",
       "negligent_injury",
+      "dui_public_danger",
       "negligent_death"
     ],
     "details": [
-      {
-        "id": "dui_public_danger",
-        "name_zh": "酒駕 / 公共危險",
-        "name_en": "DUI / public danger",
-        "confidence": 0.65,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "185-3"
-          }
-        ],
-        "evidence": [
-          "機車",
-          "開車"
-        ]
-      },
       {
         "id": "injury",
         "name_zh": "傷害",
@@ -3120,6 +3180,21 @@
         ]
       },
       {
+        "id": "dui_public_danger",
+        "name_zh": "酒駕 / 公共危險",
+        "name_en": "DUI / public danger",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "刑法",
+            "article": "185-3"
+          }
+        ],
+        "evidence": [
+          "開車"
+        ]
+      },
+      {
         "id": "negligent_death",
         "name_zh": "過失致死",
         "name_en": "negligent homicide",
@@ -3142,9 +3217,53 @@
       "tort_damages"
     ],
     "predicted": [
+      "contract_breach",
+      "sales_defect",
       "inheritance"
     ],
     "details": [
+      {
+        "id": "contract_breach",
+        "name_zh": "契約違約 / 債務不履行",
+        "name_en": "contract breach",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "民法",
+            "article": "226"
+          },
+          {
+            "law": "民法",
+            "article": "227"
+          }
+        ],
+        "evidence": [
+          "完成工作"
+        ]
+      },
+      {
+        "id": "sales_defect",
+        "name_zh": "買賣瑕疵",
+        "name_en": "sales defect",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "民法",
+            "article": "354"
+          },
+          {
+            "law": "民法",
+            "article": "359"
+          },
+          {
+            "law": "民法",
+            "article": "360"
+          }
+        ],
+        "evidence": [
+          "修理"
+        ]
+      },
       {
         "id": "inheritance",
         "name_zh": "繼承",
@@ -3170,7 +3289,7 @@
     "predicted": [
       "dui_public_danger",
       "injury",
-      "negligent_injury"
+      "intimidation"
     ],
     "details": [
       {
@@ -3185,7 +3304,7 @@
           }
         ],
         "evidence": [
-          "機車",
+          "酒後",
           "開車"
         ]
       },
@@ -3205,18 +3324,18 @@
         ]
       },
       {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
         "confidence": 0.55,
         "supporting_laws": [
           {
             "law": "刑法",
-            "article": "284"
+            "article": "305"
           }
         ],
         "evidence": [
-          "不小心"
+          "小心"
         ]
       }
     ]
@@ -3235,7 +3354,7 @@
         "id": "injury",
         "name_zh": "傷害",
         "name_en": "injury",
-        "confidence": 0.75,
+        "confidence": 0.8500000000000001,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -3245,6 +3364,7 @@
         "evidence": [
           "傷害",
           "打",
+          "毆",
           "毆打"
         ]
       },
@@ -3411,7 +3531,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.75,
+        "confidence": 0.8500000000000001,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -3419,6 +3539,7 @@
           }
         ],
         "evidence": [
+          "酒後",
           "酒測",
           "酒精濃度",
           "開車"
@@ -3441,7 +3562,7 @@
         "id": "negligent_injury",
         "name_zh": "過失傷害",
         "name_en": "negligent injury",
-        "confidence": 0.65,
+        "confidence": 0.75,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -3449,6 +3570,7 @@
           }
         ],
         "evidence": [
+          "沒注意",
           "過失",
           "過失傷害"
         ]
@@ -3562,7 +3684,7 @@
           }
         ],
         "evidence": [
-          "機車",
+          "酒後",
           "酒後駕車",
           "酒精濃度",
           "醉"
@@ -3640,7 +3762,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.75,
+        "confidence": 0.65,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -3648,7 +3770,6 @@
           }
         ],
         "evidence": [
-          "機車",
           "酒精濃度",
           "醉"
         ]
@@ -3696,7 +3817,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.8500000000000001,
+        "confidence": 0.95,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -3704,6 +3825,7 @@
           }
         ],
         "evidence": [
+          "酒後",
           "酒精濃度",
           "酒駕",
           "醉",
@@ -3764,7 +3886,7 @@
         ],
         "evidence": [
           "公共危險",
-          "機車",
+          "酒後",
           "酒精濃度"
         ]
       }
@@ -3776,7 +3898,8 @@
       "negligent_death"
     ],
     "predicted": [
-      "tort_damages"
+      "tort_damages",
+      "injury"
     ],
     "details": [
       {
@@ -3802,6 +3925,21 @@
           "損害",
           "損害賠償",
           "賠償"
+        ]
+      },
+      {
+        "id": "injury",
+        "name_zh": "傷害",
+        "name_en": "injury",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "刑法",
+            "article": "277"
+          }
+        ],
+        "evidence": [
+          "毆"
         ]
       }
     ]
@@ -3944,22 +4082,22 @@
       "unjust_enrichment"
     ],
     "predicted": [
-      "negligent_injury"
+      "intimidation"
     ],
     "details": [
       {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
         "confidence": 0.55,
         "supporting_laws": [
           {
             "law": "刑法",
-            "article": "284"
+            "article": "305"
           }
         ],
         "evidence": [
-          "不小心"
+          "小心"
         ]
       }
     ]
@@ -4162,7 +4300,7 @@
           }
         ],
         "evidence": [
-          "機車",
+          "酒後",
           "醉"
         ]
       }
@@ -4209,7 +4347,7 @@
         "id": "unjust_enrichment",
         "name_zh": "不當得利",
         "name_en": "unjust enrichment",
-        "confidence": 0.65,
+        "confidence": 0.75,
         "supporting_laws": [
           {
             "law": "民法",
@@ -4218,6 +4356,7 @@
         ],
         "evidence": [
           "不當得利",
+          "帳戶",
           "得利"
         ]
       },
@@ -4244,11 +4383,27 @@
       "negligent_injury"
     ],
     "predicted": [
-      "injury",
       "negligent_injury",
+      "injury",
       "property_damage"
     ],
     "details": [
+      {
+        "id": "negligent_injury",
+        "name_zh": "過失傷害",
+        "name_en": "negligent injury",
+        "confidence": 0.65,
+        "supporting_laws": [
+          {
+            "law": "刑法",
+            "article": "284"
+          }
+        ],
+        "evidence": [
+          "沒注意",
+          "車禍"
+        ]
+      },
       {
         "id": "injury",
         "name_zh": "傷害",
@@ -4262,21 +4417,6 @@
         ],
         "evidence": [
           "受傷"
-        ]
-      },
-      {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "284"
-          }
-        ],
-        "evidence": [
-          "車禍"
         ]
       },
       {
@@ -4337,7 +4477,7 @@
         "id": "injury",
         "name_zh": "傷害",
         "name_en": "injury",
-        "confidence": 0.65,
+        "confidence": 0.75,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -4346,7 +4486,8 @@
         ],
         "evidence": [
           "傷害",
-          "受傷"
+          "受傷",
+          "流血"
         ]
       },
       {
@@ -4407,7 +4548,7 @@
     ],
     "predicted": [
       "tort_damages",
-      "negligent_injury",
+      "intimidation",
       "contract_breach"
     ],
     "details": [
@@ -4437,18 +4578,18 @@
         ]
       },
       {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
         "confidence": 0.55,
         "supporting_laws": [
           {
             "law": "刑法",
-            "article": "284"
+            "article": "305"
           }
         ],
         "evidence": [
-          "不小心"
+          "小心"
         ]
       },
       {
@@ -4493,7 +4634,7 @@
           }
         ],
         "evidence": [
-          "機車",
+          "酒後",
           "酒測",
           "酒精濃度",
           "酒駕",
@@ -4516,7 +4657,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.65,
+        "confidence": 0.75,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -4524,6 +4665,7 @@
           }
         ],
         "evidence": [
+          "酒後",
           "酒測",
           "酒精濃度"
         ]
@@ -4569,7 +4711,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.55,
+        "confidence": 0.65,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -4577,6 +4719,7 @@
           }
         ],
         "evidence": [
+          "酒後",
           "酒後駕車"
         ]
       },
@@ -4704,7 +4847,8 @@
       "fraud"
     ],
     "predicted": [
-      "fraud"
+      "fraud",
+      "unjust_enrichment"
     ],
     "details": [
       {
@@ -4722,6 +4866,21 @@
           "匯款",
           "詐騙",
           "騙"
+        ]
+      },
+      {
+        "id": "unjust_enrichment",
+        "name_zh": "不當得利",
+        "name_en": "unjust enrichment",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "民法",
+            "article": "179"
+          }
+        ],
+        "evidence": [
+          "帳戶"
         ]
       }
     ]
@@ -4815,14 +4974,14 @@
     ],
     "predicted": [
       "injury",
-      "negligent_injury"
+      "intimidation"
     ],
     "details": [
       {
         "id": "injury",
         "name_zh": "傷害",
         "name_en": "injury",
-        "confidence": 0.65,
+        "confidence": 0.75,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -4831,22 +4990,23 @@
         ],
         "evidence": [
           "傷害",
-          "受傷"
+          "受傷",
+          "流血"
         ]
       },
       {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
         "confidence": 0.55,
         "supporting_laws": [
           {
             "law": "刑法",
-            "article": "284"
+            "article": "305"
           }
         ],
         "evidence": [
-          "不小心"
+          "小心"
         ]
       }
     ]
@@ -4899,7 +5059,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.65,
+        "confidence": 0.75,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -4908,6 +5068,7 @@
         ],
         "evidence": [
           "公共危險",
+          "酒後",
           "酒精濃度"
         ]
       },
@@ -4941,7 +5102,7 @@
         "id": "injury",
         "name_zh": "傷害",
         "name_en": "injury",
-        "confidence": 0.65,
+        "confidence": 0.75,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -4950,7 +5111,8 @@
         ],
         "evidence": [
           "傷害",
-          "受傷"
+          "受傷",
+          "流血"
         ]
       }
     ]
@@ -5209,7 +5371,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.75,
+        "confidence": 0.8500000000000001,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -5217,6 +5379,7 @@
           }
         ],
         "evidence": [
+          "酒後",
           "酒後駕車",
           "酒測",
           "酒精濃度"
@@ -5279,7 +5442,7 @@
     "predicted": [
       "theft",
       "injury",
-      "negligent_injury"
+      "intimidation"
     ],
     "details": [
       {
@@ -5314,18 +5477,18 @@
         ]
       },
       {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
         "confidence": 0.55,
         "supporting_laws": [
           {
             "law": "刑法",
-            "article": "284"
+            "article": "305"
           }
         ],
         "evidence": [
-          "不小心"
+          "小心"
         ]
       }
     ]
@@ -5343,7 +5506,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.55,
+        "confidence": 0.65,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -5351,6 +5514,7 @@
           }
         ],
         "evidence": [
+          "酒後",
           "酒精濃度"
         ]
       }
@@ -5363,14 +5527,14 @@
     ],
     "predicted": [
       "dui_public_danger",
-      "negligent_injury"
+      "intimidation"
     ],
     "details": [
       {
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.55,
+        "confidence": 0.65,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -5378,22 +5542,23 @@
           }
         ],
         "evidence": [
+          "酒後",
           "酒後駕車"
         ]
       },
       {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
         "confidence": 0.55,
         "supporting_laws": [
           {
             "law": "刑法",
-            "article": "284"
+            "article": "305"
           }
         ],
         "evidence": [
-          "不小心"
+          "小心"
         ]
       }
     ]
@@ -5412,7 +5577,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.65,
+        "confidence": 0.55,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -5420,7 +5585,6 @@
           }
         ],
         "evidence": [
-          "機車",
           "酒精濃度"
         ]
       },
@@ -5601,7 +5765,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.75,
+        "confidence": 0.8500000000000001,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -5609,6 +5773,7 @@
           }
         ],
         "evidence": [
+          "酒後",
           "酒測",
           "酒精濃度",
           "酒駕"
@@ -5824,11 +5989,11 @@
           }
         ],
         "evidence": [
+          "酒後",
           "酒後駕車",
           "酒精濃度",
           "酒駕",
-          "醉",
-          "開車"
+          "醉"
         ]
       }
     ]
@@ -5840,8 +6005,8 @@
     ],
     "predicted": [
       "tort_damages",
-      "fraud",
       "contract_breach",
+      "fraud",
       "property_damage",
       "sales_defect"
     ],
@@ -5872,6 +6037,27 @@
         ]
       },
       {
+        "id": "contract_breach",
+        "name_zh": "契約違約 / 債務不履行",
+        "name_en": "contract breach",
+        "confidence": 0.75,
+        "supporting_laws": [
+          {
+            "law": "民法",
+            "article": "226"
+          },
+          {
+            "law": "民法",
+            "article": "227"
+          }
+        ],
+        "evidence": [
+          "依約",
+          "契約",
+          "違約"
+        ]
+      },
+      {
         "id": "fraud",
         "name_zh": "詐欺",
         "name_en": "fraud",
@@ -5885,26 +6071,6 @@
         "evidence": [
           "詐騙",
           "騙"
-        ]
-      },
-      {
-        "id": "contract_breach",
-        "name_zh": "契約違約 / 債務不履行",
-        "name_en": "contract breach",
-        "confidence": 0.65,
-        "supporting_laws": [
-          {
-            "law": "民法",
-            "article": "226"
-          },
-          {
-            "law": "民法",
-            "article": "227"
-          }
-        ],
-        "evidence": [
-          "契約",
-          "違約"
         ]
       },
       {
@@ -5960,7 +6126,7 @@
         "id": "injury",
         "name_zh": "傷害",
         "name_en": "injury",
-        "confidence": 0.65,
+        "confidence": 0.8500000000000001,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -5969,7 +6135,9 @@
         ],
         "evidence": [
           "傷害",
-          "受傷"
+          "受傷",
+          "毆",
+          "流血"
         ]
       }
     ]
@@ -6009,8 +6177,8 @@
     "predicted": [
       "dui_public_danger",
       "injury",
-      "negligent_injury",
-      "property_damage"
+      "property_damage",
+      "intimidation"
     ],
     "details": [
       {
@@ -6046,21 +6214,6 @@
         ]
       },
       {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "284"
-          }
-        ],
-        "evidence": [
-          "不小心"
-        ]
-      },
-      {
         "id": "property_damage",
         "name_zh": "毀損",
         "name_en": "property damage",
@@ -6073,6 +6226,21 @@
         ],
         "evidence": [
           "損壞"
+        ]
+      },
+      {
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "刑法",
+            "article": "305"
+          }
+        ],
+        "evidence": [
+          "小心"
         ]
       }
     ]
@@ -6100,7 +6268,7 @@
           }
         ],
         "evidence": [
-          "機車",
+          "酒後",
           "酒精濃度",
           "酒駕",
           "醉"
@@ -6201,7 +6369,6 @@
     ],
     "predicted": [
       "hit_and_run",
-      "dui_public_danger",
       "tort_damages"
     ],
     "details": [
@@ -6219,21 +6386,6 @@
         "evidence": [
           "肇事",
           "離開現場"
-        ]
-      },
-      {
-        "id": "dui_public_danger",
-        "name_zh": "酒駕 / 公共危險",
-        "name_en": "DUI / public danger",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "185-3"
-          }
-        ],
-        "evidence": [
-          "機車"
         ]
       },
       {
@@ -6329,7 +6481,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.65,
+        "confidence": 0.55,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -6337,7 +6489,6 @@
           }
         ],
         "evidence": [
-          "機車",
           "酒精濃度"
         ]
       }
@@ -6351,7 +6502,8 @@
     ],
     "predicted": [
       "theft",
-      "negligent_injury"
+      "negligent_injury",
+      "intimidation"
     ],
     "details": [
       {
@@ -6381,7 +6533,22 @@
           }
         ],
         "evidence": [
-          "不小心"
+          "沒注意"
+        ]
+      },
+      {
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "刑法",
+            "article": "305"
+          }
+        ],
+        "evidence": [
+          "小心"
         ]
       }
     ]
@@ -6402,7 +6569,8 @@
     "predicted": [
       "fraud",
       "tort_damages",
-      "injury"
+      "injury",
+      "unjust_enrichment"
     ],
     "details": [
       {
@@ -6460,6 +6628,21 @@
         ],
         "evidence": [
           "打"
+        ]
+      },
+      {
+        "id": "unjust_enrichment",
+        "name_zh": "不當得利",
+        "name_en": "unjust enrichment",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "民法",
+            "article": "179"
+          }
+        ],
+        "evidence": [
+          "帳戶"
         ]
       }
     ]
@@ -6534,7 +6717,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.75,
+        "confidence": 0.65,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -6542,7 +6725,6 @@
           }
         ],
         "evidence": [
-          "機車",
           "酒測",
           "酒精濃度"
         ]
@@ -6625,7 +6807,7 @@
     "predicted": [
       "dui_public_danger",
       "injury",
-      "negligent_injury"
+      "intimidation"
     ],
     "details": [
       {
@@ -6661,18 +6843,18 @@
         ]
       },
       {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
         "confidence": 0.55,
         "supporting_laws": [
           {
             "law": "刑法",
-            "article": "284"
+            "article": "305"
           }
         ],
         "evidence": [
-          "不小心"
+          "小心"
         ]
       }
     ]
@@ -6736,7 +6918,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.65,
+        "confidence": 0.75,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -6744,6 +6926,7 @@
           }
         ],
         "evidence": [
+          "酒後",
           "酒後駕車",
           "醉"
         ]
@@ -6801,7 +6984,8 @@
       "dui_public_danger"
     ],
     "predicted": [
-      "dui_public_danger"
+      "dui_public_danger",
+      "intimidation"
     ],
     "details": [
       {
@@ -6817,6 +7001,21 @@
         ],
         "evidence": [
           "醉"
+        ]
+      },
+      {
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "刑法",
+            "article": "305"
+          }
+        ],
+        "evidence": [
+          "小心"
         ]
       }
     ]
@@ -6902,7 +7101,7 @@
           }
         ],
         "evidence": [
-          "機車",
+          "酒後",
           "酒精濃度"
         ]
       }
@@ -7003,7 +7202,7 @@
     "predicted": [
       "theft",
       "aggravated_theft",
-      "negligent_injury"
+      "intimidation"
     ],
     "details": [
       {
@@ -7037,18 +7236,18 @@
         ]
       },
       {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
         "confidence": 0.55,
         "supporting_laws": [
           {
             "law": "刑法",
-            "article": "284"
+            "article": "305"
           }
         ],
         "evidence": [
-          "不小心"
+          "小心"
         ]
       }
     ]
@@ -7110,7 +7309,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.75,
+        "confidence": 0.8500000000000001,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -7118,6 +7317,7 @@
           }
         ],
         "evidence": [
+          "酒後",
           "酒精濃度",
           "醉",
           "開車"
@@ -7132,7 +7332,6 @@
     ],
     "predicted": [
       "negligent_injury",
-      "dui_public_danger",
       "injury",
       "negligent_death",
       "hit_and_run"
@@ -7152,21 +7351,6 @@
         "evidence": [
           "過失",
           "過失傷害"
-        ]
-      },
-      {
-        "id": "dui_public_danger",
-        "name_zh": "酒駕 / 公共危險",
-        "name_en": "DUI / public danger",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "185-3"
-          }
-        ],
-        "evidence": [
-          "機車"
         ]
       },
       {
@@ -7230,7 +7414,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.55,
+        "confidence": 0.65,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -7238,6 +7422,7 @@
           }
         ],
         "evidence": [
+          "酒後",
           "酒精濃度"
         ]
       },
@@ -7309,7 +7494,6 @@
     "predicted": [
       "injury",
       "negligent_injury",
-      "dui_public_danger",
       "negligent_death",
       "hit_and_run"
     ],
@@ -7344,21 +7528,6 @@
         "evidence": [
           "過失",
           "過失傷害"
-        ]
-      },
-      {
-        "id": "dui_public_danger",
-        "name_zh": "酒駕 / 公共危險",
-        "name_en": "DUI / public danger",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "185-3"
-          }
-        ],
-        "evidence": [
-          "機車"
         ]
       },
       {
@@ -7406,7 +7575,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.75,
+        "confidence": 0.65,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -7414,7 +7583,6 @@
           }
         ],
         "evidence": [
-          "機車",
           "酒測",
           "酒精濃度"
         ]
@@ -7695,7 +7863,7 @@
         "id": "injury",
         "name_zh": "傷害",
         "name_en": "injury",
-        "confidence": 0.75,
+        "confidence": 0.8500000000000001,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -7705,6 +7873,7 @@
         "evidence": [
           "傷害",
           "打",
+          "毆",
           "毆打"
         ]
       },
@@ -7777,7 +7946,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.55,
+        "confidence": 0.65,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -7785,6 +7954,7 @@
           }
         ],
         "evidence": [
+          "酒後",
           "酒精濃度"
         ]
       }
@@ -7852,7 +8022,7 @@
     "predicted": [
       "theft",
       "injury",
-      "negligent_injury"
+      "intimidation"
     ],
     "details": [
       {
@@ -7888,18 +8058,18 @@
         ]
       },
       {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
         "confidence": 0.55,
         "supporting_laws": [
           {
             "law": "刑法",
-            "article": "284"
+            "article": "305"
           }
         ],
         "evidence": [
-          "不小心"
+          "小心"
         ]
       }
     ]
@@ -7912,7 +8082,6 @@
     ],
     "predicted": [
       "theft",
-      "dui_public_danger",
       "tort_damages"
     ],
     "details": [
@@ -7930,21 +8099,6 @@
         "evidence": [
           "偷",
           "竊盜"
-        ]
-      },
-      {
-        "id": "dui_public_danger",
-        "name_zh": "酒駕 / 公共危險",
-        "name_en": "DUI / public danger",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "185-3"
-          }
-        ],
-        "evidence": [
-          "機車"
         ]
       },
       {
@@ -7978,7 +8132,8 @@
       "fraud"
     ],
     "predicted": [
-      "fraud"
+      "fraud",
+      "unjust_enrichment"
     ],
     "details": [
       {
@@ -7995,6 +8150,21 @@
         "evidence": [
           "詐騙",
           "騙"
+        ]
+      },
+      {
+        "id": "unjust_enrichment",
+        "name_zh": "不當得利",
+        "name_en": "unjust enrichment",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "民法",
+            "article": "179"
+          }
+        ],
+        "evidence": [
+          "帳戶"
         ]
       }
     ]
@@ -8076,7 +8246,7 @@
     "predicted": [
       "dui_public_danger",
       "injury",
-      "negligent_injury"
+      "intimidation"
     ],
     "details": [
       {
@@ -8092,10 +8262,10 @@
         ],
         "evidence": [
           "公共危險",
+          "酒後",
           "酒精濃度",
           "酒駕",
-          "醉",
-          "開車"
+          "醉"
         ]
       },
       {
@@ -8114,18 +8284,18 @@
         ]
       },
       {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
         "confidence": 0.55,
         "supporting_laws": [
           {
             "law": "刑法",
-            "article": "284"
+            "article": "305"
           }
         ],
         "evidence": [
-          "不小心"
+          "小心"
         ]
       }
     ]
@@ -8143,7 +8313,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.65,
+        "confidence": 0.75,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -8152,6 +8322,7 @@
         ],
         "evidence": [
           "公共危險",
+          "酒後",
           "酒精濃度"
         ]
       }
@@ -8170,7 +8341,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.8500000000000001,
+        "confidence": 0.95,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -8179,6 +8350,7 @@
         ],
         "evidence": [
           "公共危險",
+          "酒後",
           "酒測",
           "酒精濃度",
           "酒駕"
@@ -8283,7 +8455,7 @@
           }
         ],
         "evidence": [
-          "機車",
+          "酒後",
           "酒精濃度",
           "酒駕"
         ]
@@ -8372,7 +8544,7 @@
           }
         ],
         "evidence": [
-          "機車",
+          "酒後",
           "酒後駕車",
           "酒測",
           "酒精濃度"
@@ -8491,7 +8663,7 @@
     ],
     "predicted": [
       "dui_public_danger",
-      "negligent_injury"
+      "intimidation"
     ],
     "details": [
       {
@@ -8510,18 +8682,18 @@
         ]
       },
       {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
         "confidence": 0.55,
         "supporting_laws": [
           {
             "law": "刑法",
-            "article": "284"
+            "article": "305"
           }
         ],
         "evidence": [
-          "不小心"
+          "小心"
         ]
       }
     ]
@@ -8532,27 +8704,12 @@
       "negligent_injury"
     ],
     "predicted": [
-      "negligent_injury",
       "injury",
-      "negligent_death"
+      "negligent_injury",
+      "negligent_death",
+      "intimidation"
     ],
     "details": [
-      {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
-        "confidence": 0.65,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "284"
-          }
-        ],
-        "evidence": [
-          "不小心",
-          "過失"
-        ]
-      },
       {
         "id": "injury",
         "name_zh": "傷害",
@@ -8569,6 +8726,21 @@
         ]
       },
       {
+        "id": "negligent_injury",
+        "name_zh": "過失傷害",
+        "name_en": "negligent injury",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "刑法",
+            "article": "284"
+          }
+        ],
+        "evidence": [
+          "過失"
+        ]
+      },
+      {
         "id": "negligent_death",
         "name_zh": "過失致死",
         "name_en": "negligent homicide",
@@ -8582,6 +8754,21 @@
         "evidence": [
           "過失"
         ]
+      },
+      {
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "刑法",
+            "article": "305"
+          }
+        ],
+        "evidence": [
+          "小心"
+        ]
       }
     ]
   },
@@ -8591,14 +8778,15 @@
       "injury"
     ],
     "predicted": [
-      "injury"
+      "injury",
+      "dui_public_danger"
     ],
     "details": [
       {
         "id": "injury",
         "name_zh": "傷害",
         "name_en": "injury",
-        "confidence": 0.55,
+        "confidence": 0.65,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -8606,7 +8794,23 @@
           }
         ],
         "evidence": [
-          "打"
+          "打",
+          "流血"
+        ]
+      },
+      {
+        "id": "dui_public_danger",
+        "name_zh": "酒駕 / 公共危險",
+        "name_en": "DUI / public danger",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "刑法",
+            "article": "185-3"
+          }
+        ],
+        "evidence": [
+          "酒後"
         ]
       }
     ]
@@ -8625,7 +8829,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.75,
+        "confidence": 0.8500000000000001,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -8634,6 +8838,7 @@
         ],
         "evidence": [
           "公共危險",
+          "酒後",
           "酒測",
           "酒精濃度"
         ]
@@ -8724,7 +8929,8 @@
       "dui_public_danger",
       "negligent_injury",
       "injury",
-      "negligent_death"
+      "negligent_death",
+      "intimidation"
     ],
     "details": [
       {
@@ -8749,7 +8955,7 @@
         "id": "negligent_injury",
         "name_zh": "過失傷害",
         "name_en": "negligent injury",
-        "confidence": 0.75,
+        "confidence": 0.65,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -8757,7 +8963,6 @@
           }
         ],
         "evidence": [
-          "不小心",
           "過失",
           "過失傷害"
         ]
@@ -8791,6 +8996,21 @@
         "evidence": [
           "過失"
         ]
+      },
+      {
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "刑法",
+            "article": "305"
+          }
+        ],
+        "evidence": [
+          "小心"
+        ]
       }
     ]
   },
@@ -8815,7 +9035,7 @@
           }
         ],
         "evidence": [
-          "機車",
+          "酒後",
           "酒後駕車"
         ]
       }
@@ -8827,7 +9047,8 @@
       "dui_public_danger"
     ],
     "predicted": [
-      "dui_public_danger"
+      "dui_public_danger",
+      "intimidation"
     ],
     "details": [
       {
@@ -8844,6 +9065,21 @@
         "evidence": [
           "酒精濃度",
           "開車"
+        ]
+      },
+      {
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "刑法",
+            "article": "305"
+          }
+        ],
+        "evidence": [
+          "小心"
         ]
       }
     ]
@@ -8888,7 +9124,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.65,
+        "confidence": 0.55,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -8896,8 +9132,7 @@
           }
         ],
         "evidence": [
-          "公共危險",
-          "機車"
+          "公共危險"
         ]
       }
     ]
@@ -9098,7 +9333,7 @@
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.65,
+        "confidence": 0.75,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -9106,6 +9341,7 @@
           }
         ],
         "evidence": [
+          "酒後",
           "酒精濃度",
           "開車"
         ]
@@ -9147,8 +9383,26 @@
     "gold": [
       "aggravated_theft"
     ],
-    "predicted": [],
-    "details": []
+    "predicted": [
+      "unjust_enrichment"
+    ],
+    "details": [
+      {
+        "id": "unjust_enrichment",
+        "name_zh": "不當得利",
+        "name_en": "unjust enrichment",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "民法",
+            "article": "179"
+          }
+        ],
+        "evidence": [
+          "帳戶"
+        ]
+      }
+    ]
   },
   {
     "id": "synthetic-1266",
@@ -9201,7 +9455,7 @@
         ],
         "evidence": [
           "公共危險",
-          "機車",
+          "酒後",
           "酒精濃度"
         ]
       }
@@ -9214,8 +9468,9 @@
     ],
     "predicted": [
       "injury",
-      "negligent_injury",
-      "property_damage"
+      "property_damage",
+      "intimidation",
+      "sales_defect"
     ],
     "details": [
       {
@@ -9234,21 +9489,6 @@
         ]
       },
       {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "284"
-          }
-        ],
-        "evidence": [
-          "不小心"
-        ]
-      },
-      {
         "id": "property_damage",
         "name_zh": "毀損",
         "name_en": "property damage",
@@ -9262,6 +9502,44 @@
         "evidence": [
           "破壞"
         ]
+      },
+      {
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "刑法",
+            "article": "305"
+          }
+        ],
+        "evidence": [
+          "小心"
+        ]
+      },
+      {
+        "id": "sales_defect",
+        "name_zh": "買賣瑕疵",
+        "name_en": "sales defect",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "民法",
+            "article": "354"
+          },
+          {
+            "law": "民法",
+            "article": "359"
+          },
+          {
+            "law": "民法",
+            "article": "360"
+          }
+        ],
+        "evidence": [
+          "修理"
+        ]
       }
     ]
   },
@@ -9271,15 +9549,14 @@
       "intimidation"
     ],
     "predicted": [
-      "intimidation",
-      "negligent_injury"
+      "intimidation"
     ],
     "details": [
       {
         "id": "intimidation",
         "name_zh": "恐嚇",
         "name_en": "intimidation",
-        "confidence": 0.65,
+        "confidence": 0.75,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -9288,22 +9565,8 @@
         ],
         "evidence": [
           "威脅",
+          "小心",
           "恐嚇"
-        ]
-      },
-      {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "284"
-          }
-        ],
-        "evidence": [
-          "不小心"
         ]
       }
     ]
@@ -9315,14 +9578,15 @@
     ],
     "predicted": [
       "dui_public_danger",
-      "negligent_injury"
+      "intimidation",
+      "unjust_enrichment"
     ],
     "details": [
       {
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.55,
+        "confidence": 0.65,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -9330,22 +9594,38 @@
           }
         ],
         "evidence": [
+          "酒後",
           "醉"
         ]
       },
       {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
         "confidence": 0.55,
         "supporting_laws": [
           {
             "law": "刑法",
-            "article": "284"
+            "article": "305"
           }
         ],
         "evidence": [
-          "不小心"
+          "小心"
+        ]
+      },
+      {
+        "id": "unjust_enrichment",
+        "name_zh": "不當得利",
+        "name_en": "unjust enrichment",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "民法",
+            "article": "179"
+          }
+        ],
+        "evidence": [
+          "陌生人"
         ]
       }
     ]
@@ -9357,8 +9637,8 @@
     ],
     "predicted": [
       "injury",
-      "negligent_injury",
-      "property_damage"
+      "property_damage",
+      "intimidation"
     ],
     "details": [
       {
@@ -9377,21 +9657,6 @@
         ]
       },
       {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "284"
-          }
-        ],
-        "evidence": [
-          "不小心"
-        ]
-      },
-      {
         "id": "property_damage",
         "name_zh": "毀損",
         "name_en": "property damage",
@@ -9404,6 +9669,21 @@
         ],
         "evidence": [
           "破壞"
+        ]
+      },
+      {
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "刑法",
+            "article": "305"
+          }
+        ],
+        "evidence": [
+          "小心"
         ]
       }
     ]
@@ -9509,7 +9789,7 @@
     ],
     "predicted": [
       "hit_and_run",
-      "negligent_injury"
+      "intimidation"
     ],
     "details": [
       {
@@ -9530,18 +9810,18 @@
         ]
       },
       {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
         "confidence": 0.55,
         "supporting_laws": [
           {
             "law": "刑法",
-            "article": "284"
+            "article": "305"
           }
         ],
         "evidence": [
-          "不小心"
+          "小心"
         ]
       }
     ]
@@ -9581,7 +9861,7 @@
     ],
     "predicted": [
       "theft",
-      "negligent_injury"
+      "intimidation"
     ],
     "details": [
       {
@@ -9602,18 +9882,18 @@
         ]
       },
       {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
         "confidence": 0.55,
         "supporting_laws": [
           {
             "law": "刑法",
-            "article": "284"
+            "article": "305"
           }
         ],
         "evidence": [
-          "不小心"
+          "小心"
         ]
       }
     ]
@@ -9623,26 +9903,8 @@
     "gold": [
       "negligent_injury"
     ],
-    "predicted": [
-      "dui_public_danger"
-    ],
-    "details": [
-      {
-        "id": "dui_public_danger",
-        "name_zh": "酒駕 / 公共危險",
-        "name_en": "DUI / public danger",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "185-3"
-          }
-        ],
-        "evidence": [
-          "機車"
-        ]
-      }
-    ]
+    "predicted": [],
+    "details": []
   },
   {
     "id": "synthetic-3353",
@@ -9678,16 +9940,16 @@
     ],
     "predicted": [
       "dui_public_danger",
-      "negligent_injury",
       "hit_and_run",
-      "property_damage"
+      "property_damage",
+      "intimidation"
     ],
     "details": [
       {
         "id": "dui_public_danger",
         "name_zh": "酒駕 / 公共危險",
         "name_en": "DUI / public danger",
-        "confidence": 0.65,
+        "confidence": 0.55,
         "supporting_laws": [
           {
             "law": "刑法",
@@ -9695,23 +9957,7 @@
           }
         ],
         "evidence": [
-          "機車",
           "酒精濃度"
-        ]
-      },
-      {
-        "id": "negligent_injury",
-        "name_zh": "過失傷害",
-        "name_en": "negligent injury",
-        "confidence": 0.55,
-        "supporting_laws": [
-          {
-            "law": "刑法",
-            "article": "284"
-          }
-        ],
-        "evidence": [
-          "不小心"
         ]
       },
       {
@@ -9742,6 +9988,21 @@
         ],
         "evidence": [
           "損壞"
+        ]
+      },
+      {
+        "id": "intimidation",
+        "name_zh": "恐嚇",
+        "name_en": "intimidation",
+        "confidence": 0.55,
+        "supporting_laws": [
+          {
+            "law": "刑法",
+            "article": "305"
+          }
+        ],
+        "evidence": [
+          "小心"
         ]
       }
     ]
