@@ -89,10 +89,14 @@ if [[ ! -d node_modules ]]; then
   npm ci
 fi
 
-echo "Starting Next.js frontend on http://$WEB_HOST:$WEB_PORT"
-npm run dev -- --hostname "$WEB_HOST" -p "$WEB_PORT" > /tmp/nlp_final_next.log 2>&1 &
+echo "Building Next.js frontend..."
+npm run build
+
+echo "Starting static frontend on http://$WEB_HOST:$WEB_PORT"
+cd "$ROOT_DIR/web/out"
+python3 -m http.server "$WEB_PORT" --bind "$WEB_HOST" > /tmp/nlp_final_next.log 2>&1 &
 WEB_PID="$!"
-wait_for_url "http://$WEB_HOST:$WEB_PORT" "Next.js frontend" 45
+wait_for_url "http://$WEB_HOST:$WEB_PORT" "Static frontend" 15
 
 echo
 echo "Demo is ready."
@@ -101,7 +105,7 @@ echo "API health: http://$API_HOST:$API_PORT/api/health"
 echo
 echo "If Next.js reports a different port, check: /tmp/nlp_final_next.log"
 echo "Flask log: /tmp/nlp_final_flask.log"
-echo "Next log: /tmp/nlp_final_next.log"
+echo "Frontend log: /tmp/nlp_final_next.log"
 echo
 echo "Press Ctrl+C to stop both services."
 
