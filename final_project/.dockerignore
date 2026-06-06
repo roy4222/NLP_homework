@@ -1,0 +1,15 @@
+web/
+external/
+.venv/
+.pytest_cache/
+.ruff_cache/
+__pycache__/
+**/__pycache__/
+*.pyc
+data/raw/
+data/hf_cache/
+data/*.joblib
+report/
+docs/
+data_exploration/
+*.md

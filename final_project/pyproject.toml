@@ -19,6 +19,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0", "ruff>=0.6"]
+serve = ["gunicorn>=22.0"]
 bert = ["torch>=2.2", "transformers>=4.40", "accelerate>=0.30"]
 
 [tool.pytest.ini_options]

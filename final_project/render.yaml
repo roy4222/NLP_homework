@@ -1,0 +1,12 @@
+# Render.com blueprint for the LexTag prediction API (Docker).
+# Deploy: push to GitHub, then on render.com "New > Blueprint" and pick this repo.
+# Free plan sleeps after ~15 min idle (first request after sleep is slow ~50s).
+services:
+  - type: web
+    name: lextag-api
+    runtime: docker
+    rootDir: final_project
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /api/health
+    autoDeploy: false

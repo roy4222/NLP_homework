@@ -1,6 +1,9 @@
 export type SupportingLaw = {
   law: string;
   article: string;
+  /** Full statute text, surfaced as a lookup clue (not legal advice). */
+  text?: string;
+  full_law?: string;
 };
 
 export type Prediction = {
@@ -12,11 +15,21 @@ export type Prediction = {
   evidence: string[];
 };
 
+/** One candidate issue scored across the trained models, for the comparison view. */
+export type GridRow = {
+  id: string;
+  name_zh: string;
+  name_en: string;
+  rule: number; // 0 / 1 (keyword hit)
+  tfidf_svm: number; // 0..1 confidence
+};
+
 export type PredictResponse = {
   input: string;
   status: string;
   final_prediction: Prediction[];
   models: Record<string, Prediction[]>;
+  grid: GridRow[];
   explanation: {
     matched_keywords: string[];
     needs_review: boolean;

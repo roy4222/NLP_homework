@@ -1,102 +1,209 @@
-# Chinese Legal Issue Triage: Multi-label Prediction from Everyday Legal Narratives
+# Chinese Legal Issue Triage
+### Multi-label NLP Classification from Everyday Legal Narratives
 
-## 1. Project Overview
+**Course:** Natural Language Processing (NLP) · Final Project
+**System name:** LexTag — Legal Issue Triage
+**Disclaimer:** This project performs legal *issue triage* for NLP education. It does **not** provide legal advice and does **not** generate legal opinions.
 
-This final project builds a Chinese NLP classifier for legal issue triage. Given an everyday Chinese legal scenario, the system predicts one or more legal issue labels, confidence scores, and supporting law-article clues.
+---
 
-The project is intentionally framed as legal issue triage, not legal advice. It does not generate legal opinions, recommend litigation strategy, or replace a lawyer. Its practical goal is narrower: help a user, intake worker, or student identify likely legal topics and the statutes worth checking first.
+## 1. Research Question
 
-## 2. Research Question
+Ordinary people describe legal trouble in everyday Chinese ("someone copied my photo and posted insults under my name"), but they rarely know *which legal issue* their situation belongs to. Existing Taiwanese legal-AI products (Lawsnote, Lawbot, judgment search engines) mostly start one step too late: they assume the user already knows they have a defamation problem, a contract problem, or a fraud problem.
 
-Can a supervised NLP pipeline map everyday Chinese legal narratives to useful multi-label legal issue categories, while remaining interpretable enough to show why a label was suggested?
+This project asks one focused question:
 
-The core hypothesis is that weak labels extracted from legal citations, combined with a small legal-issue ontology, are sufficient to train a baseline classifier that is more scalable than hand-written rules and more transparent than a chatbot-style answer generator.
+> **Can an NLP classifier map a free-text Chinese legal scenario to one or more legal-issue labels — *before* any retrieval, chatbot, or legal-advice step — and surface the relevant statute text as a lookup clue?**
 
-## 3. Dataset Sources
+The deliverable is an **intake triage classifier**, not a chatbot. The output is a structured set of issue labels (e.g. `酒駕/公共危險`, `詐欺`, `妨害名譽`), confidence scores, and the **full text of the supporting statutes** as reference clues.
 
-The main weak-label source is `lianghsun/tw-legal-synthetic-qa`, a Taiwanese legal synthetic QA dataset with 9,631 examples. Each example contains a user scenario and an assistant answer. The assistant answers often include law citations, so the project uses citation normalization to derive distant-supervision labels.
+---
 
-The project also uses `lianghsun/tw-processed-law-article` as a statute lookup and ontology-support source. This dataset contains processed Taiwanese law articles, including law names, article text, hierarchy metadata, and update fields.
+## 2. Practical Application
 
-An optional out-of-domain evaluation source is `aigrant/taiwan-ly-law-research`, which contains longer legislative/legal research texts. It is not the main training distribution, but it can test whether the label space transfers beyond synthetic QA examples.
+This is the part the course guideline weights most heavily (30%), so it drives the whole design.
 
-## 4. Dataset Preprocessing
+**Why this task matters.** Legal question answering and RAG over judgments are crowded and depend on large proprietary databases. Issue *triage* is an unsolved, upstream bottleneck: every legal-aid hotline, law-firm intake form, and legal-information website needs to route a person's story to the right area of law before anything else can happen.
 
-The preprocessing pipeline converts raw assistant answers into structured classification examples:
+**Who benefits.**
 
-1. Normalize legal citations from answer text into `(law name, article number)` pairs.
-2. Map normalized citations to issue IDs through `final_project/data/issues.yaml`.
-3. Keep examples with at least one mapped issue label.
-4. Split usable examples into train, validation, and test sets.
-5. Preserve raw citations as evidence fields for later error analysis.
+- **Legal-aid intake services** — auto-route incoming requests to the correct duty lawyer/category, reducing manual triage load.
+- **Legal-information websites** — turn a free-text complaint into the right FAQ / article category.
+- **Law-firm client intake** — pre-fill a structured issue tag and candidate statutes before the first consultation.
+- **Law students** — practice connecting plain-language facts to legal concepts and the underlying articles.
 
-The dataset usability review found that only part of the synthetic QA dataset can be safely weak-labeled by citation extraction. This is a limitation, but it is also useful: it keeps the first version grounded in observable citation evidence instead of manually inventing labels.
+**How it solves a practical problem.** Instead of competing with full legal-AI products, LexTag occupies the cheap, measurable, high-leverage first step: *classification*. Because the output is a label set (not free-text advice), the task is **measurable** (F1, recall, precision) and **auditable** — and it avoids the liability and hallucination risk of generating legal opinions. The statute-text lookup gives the user a concrete, verifiable starting point without the system ever claiming the article *applies* to their case.
 
-## 5. NLP Methods
+---
 
-The project compares two levels of NLP methods.
+## 3. Dataset Description
 
-The first method is a rule-based baseline. It uses issue aliases, keyword lists, and law-article mappings from the ontology. This baseline is interpretable and easy to inspect, but it is brittle when users describe the same issue with different wording.
+### 3.1 Sources
 
-The second method is a TF-IDF plus one-vs-rest linear classifier. Chinese legal scenarios are represented with character n-gram features. A separate binary classifier is trained for each issue label, which fits the multi-label task because one scenario can involve several legal topics.
+| Dataset | Size | Role in this project |
+|---|---:|---|
+| `lianghsun/tw-legal-synthetic-qa` | 9,631 QA pairs | **Main weak-label source** — Chinese legal scenario (user turn) + analysis (assistant turn) |
+| `lianghsun/tw-processed-law-article` | 230,974 statute rows | **Statute lookup + ontology support** — provides the actual article text shown in the demo |
 
-The planned extension is a Chinese BERT-style classifier. This may improve semantic matching, but it also increases training cost and lowers interpretability. For the course project, the baseline and TF-IDF model are the minimum meaningful comparison.
+The QA dataset is in ShareGPT-style message format. We treat the **user message** as the scenario to classify, and use the **assistant message only as a weak-label signal**, because the analysis usually cites specific statutes (e.g. `刑法第185條之3`).
 
-## 6. Experiment and Test Process
+### 3.2 Preprocessing pipeline
 
-The experiment process is:
+1. **Citation normalization** (`scripts/citation_normalizer.py`) — converts varied Chinese citation forms (`刑法第185條之3`, Arabic/Chinese numerals, `臺/台` variants, full-width spaces) into stable `(law, article)` keys via NFKC normalization + a regex + a Chinese-numeral parser.
+2. **Ontology construction** (`data/issues.yaml`) — a hand-built ontology of **20 everyday legal issues** (12 criminal, 8 civil), each mapping to its supporting articles plus aliases and keywords.
+3. **Weak labeling** (`scripts/build_labels.py`) — extract citations from each assistant answer, map them through the ontology to issue labels; keep only rows with ≥1 label and a scenario ≥20 characters.
+4. **Statute-text lookup** (`scripts/build_law_lookup.py`) — for the 26 `(law, article)` pairs the ontology references, extract the **full article text** from `tw-processed-law-article` into `data/law_articles.json` (heading `<law> 第 N 條` stripped, body kept). All 26 articles resolved (13 criminal, 13 civil).
+5. **Deterministic split** (`scripts/split_data.py`) — 70/15/15 train/val/test with a fixed seed.
 
-1. Build or update the legal issue ontology.
-2. Run citation normalization and auto-labeling.
-3. Split the labeled examples into train, validation, and test sets.
-4. Train the rule-based baseline.
-5. Train the TF-IDF linear model.
-6. Evaluate all methods with the same held-out test split.
-7. Review false positives and false negatives by issue type.
+### 3.3 Resulting dataset
 
-The main metrics are micro-F1, macro-F1, hamming loss, and per-class F1. Micro-F1 shows overall label prediction quality, while macro-F1 is important because rare legal issues should not disappear behind frequent categories.
+- **1,523** weakly-labeled rows → Train **1,066** / Val **228** / Test **229**.
 
-Unit tests cover the citation normalizer, ontology YAML structure, baseline behavior, API helpers, metrics, and pipeline helper functions. CI is configured to run these Python tests and build the frontend when the web package is present.
+### 3.4 Limitations (stated honestly)
 
-## 7. Results to Report
+- **Weak labels, not gold labels** — labels are derived from synthetic legal analysis, so label noise is real.
+- **Severe class imbalance** — `酒駕/公共危險` alone is 672/1,523 (**44%**), while the rarest classes (`所有物返還`, `繼承`, `夫妻財產`) have only 9–11 examples each.
+- **Domain bias** — criminal and civil substantive law only; procedural law is intentionally excluded (this is everyday issue triage, not court-procedure classification).
+- **No guarantee of legal applicability** — a surfaced article is a lookup clue, never a claim that it governs the specific case.
 
-| Method | Micro-F1 | Macro-F1 | Hamming Loss | Notes |
-|---|---:|---:|---:|---|
-| Rule-based baseline | 0.589 | 0.419 | 0.064 | High recall and interpretability, weak paraphrase handling |
-| TF-IDF + one-vs-rest linear classifier | 0.760 | 0.324 | 0.025 | Better overall precision and micro-F1, weaker rare-label coverage |
+---
 
-Observed qualitative patterns:
+## 4. NLP Method
 
-- Rule-based predictions are useful when keywords or cited articles are explicit, but they over-predict because keyword matches are broad.
-- TF-IDF improves overall micro-F1 and hamming loss, but macro-F1 shows that rare issue labels still need more data or better balancing.
-- Rare issue labels need per-class analysis because aggregate metrics can hide weak coverage.
-- In the per-label table, support `0` means the label was predicted by a model but did not appear in the held-out test labels. This is useful for spotting over-prediction.
-- Out-of-domain examples are expected to perform worse than synthetic QA examples because the text style and length are different.
+The pipeline has five stages, mapping directly to course topics (tokenization, TF-IDF, text classification):
 
-## 8. Discussion
+1. **Citation normalization** — regex + Chinese-numeral parsing → stable article keys.
+2. **Ontology mapping** — high-frequency articles → 20 issue labels.
+3. **Weak labeling** — citation-derived multi-label targets.
+4. **Classification** — two contrasting methods (below).
+5. **Evaluation & serving** — multi-label metrics + a Flask API + a Next.js demo.
 
-The most important design decision is treating the project as classification, not legal question answering. Classification keeps the output bounded and measurable. It also avoids the higher-risk behavior of generating legal advice.
+**Method A — Rule-based baseline** (`baselines/rule.py`). Fires an issue when any of its ontology aliases/keywords appears in the scenario; confidence scales with the number of hits. Fully interpretable (it can point at the exact matched word), but brittle to unexpected phrasing.
 
-The weakest part is label quality. Citation-derived labels are practical for a student project, but they are not equivalent to expert annotation. Some answers may mention laws as background rather than as the central issue, and some valid legal issues may appear without explicit citations.
+**Method B — TF-IDF + Linear SVM** (`baselines/tfidf_svm.py`). Character n-gram (1–3) TF-IDF features → One-vs-Rest `LinearSVC` for multi-label output. It learns recurring character patterns rather than fixed keywords. In the live API, the SVM's `decision_function` is mapped through a sigmoid so the demo can show a real per-issue confidence (the 0.5 cutoff is exactly the SVM's native decision boundary).
 
-The class imbalance is another challenge. Common statutes and common issue types dominate the weak-labeled examples, so macro-F1 and per-class F1 matter more than accuracy.
+*(BERT fine-tuning was scoped as optional future work and is intentionally **not** trained — the report and demo never fabricate BERT results.)*
 
-## 9. Practical Application
+---
 
-A practical application is a legal intake assistant for educational or public-service settings. A user writes a short Chinese scenario, and the system suggests likely issue labels such as defamation, contract dispute, privacy violation, or labor dispute. The output can include confidence scores and relevant statute references for human review.
+## 5. Experiments and Testing
 
-This is useful because many people do not know the legal vocabulary for their problem. The classifier can act as a first routing layer before a human expert reviews the case.
+Two evaluations were run.
 
-## 10. Limitations
+### 5.1 Held-out test set (229 rows, `eval/metrics.py`)
 
-The system does not provide legal advice and should not be used as a final decision maker.
+Standard multi-label metrics on the deterministic test split.
 
-The main training labels are weak labels extracted from synthetic QA answers, so they may contain noise. The dataset also reflects the style and assumptions of the source data rather than real-world legal intake forms.
+### 5.2 Acceptance suite (1,000 cases, `eval/acceptance_suite.py`)
 
-The system may miss issues that require detailed legal interpretation, fact verification, or professional judgment. It may also perform worse on long documents, highly formal legal writing, or scenarios involving multiple jurisdictions.
+Following the project's own acceptance spec: **50 cases × 20 labels = 1,000**, with each label split into **30 typical / 10 colloquial / 5 ambiguous / 5 near-miss** scenarios. Near-miss cases deliberately sit next to a confusable class (e.g. a 過失傷害 story phrased near 傷害; a 不當得利 误匯 case phrased near 詐欺). Pass threshold per label: Top-1 ≥ 0.95, recall ≥ 0.95, precision ≥ 0.90.
 
-## 11. Conclusion
+> **Honesty note:** this acceptance suite is deterministic and template-based. Although it has 1,000 cases, each label is cycled from only ~3–5 base phrasings, so its linguistic diversity is far lower than the count suggests. It is course-demo validation, **not** an independent human-labeled benchmark.
 
-This project shows how course NLP methods can be combined into a practical Chinese legal issue triage pipeline. Citation normalization provides weak supervision, an ontology makes labels inspectable, and multi-label classification turns everyday narratives into measurable predictions.
+---
 
-The final model should be judged by both quantitative metrics and error analysis. A useful system is not only the one with the highest F1 score, but the one whose mistakes are visible enough for a human to review.
+## 6. Results
+
+### 6.1 Held-out test metrics
+
+| Method | Micro-F1 | Macro-F1 | Precision | Recall | Hamming Loss |
+|---|---:|---:|---:|---:|---:|
+| Rule-based | 0.600 | **0.426** | 0.470 | **0.831** | 0.062 |
+| TF-IDF + SVM | **0.760** | 0.324 | **0.851** | 0.686 | **0.025** |
+
+### 6.2 The interesting finding
+
+I originally expected TF-IDF + SVM to win on every metric. **It did not.** TF-IDF + SVM clearly wins on Micro-F1 (0.76 vs 0.60), precision (0.85 vs 0.47), and Hamming loss — it is the better, more conservative classifier overall. But the **rule-based baseline wins Macro-F1 (0.43 vs 0.32)**.
+
+The reason is class imbalance: TF-IDF + SVM scores **0.000 F1 on 9 of the 20 labels** (the rarest ones — `document_forgery`, `contract_breach`, `hit_and_run`, `intimidation`, etc.) because it never has enough examples to learn them, so it just never predicts them. The rule-based method still fires on those rare classes via keywords, so its *per-class* average is higher even though its overall quality is lower. This Micro-vs-Macro inversion is the single most important lesson of the project: **on an imbalanced multi-label task, headline accuracy hides the failure on the long tail.**
+
+Per-label highlight (test F1): `酒駕/公共危險` Rule 0.94 / SVM 0.99 (huge support), vs `intimidation` Rule 0.56 / SVM 0.00, `hit_and_run` Rule 0.19 / SVM 0.00.
+
+### 6.3 Acceptance suite (1,000 cases)
+
+| Metric | Value |
+|---|---:|
+| Overall Top-1 accuracy | **0.800** |
+| Overall Top-3 hit rate | **0.962** |
+| Overall recall@5 | **0.962** |
+| Labels passing strict gate | 1 / 20 |
+
+By scenario difficulty:
+
+| Split | Cases | Top-1 | Top-3 | Recall@5 |
+|---|---:|---:|---:|---:|
+| typical | 600 | 0.857 | 1.000 | 1.000 |
+| colloquial | 200 | 0.735 | 0.810 | 0.810 |
+| ambiguous | 100 | 0.730 | 1.000 | 1.000 |
+| near_miss | 100 | 0.600 | 1.000 | 1.000 |
+
+**Reading the numbers honestly:** Top-3 / recall@5 are strong (0.96) — the correct issue is almost always in the candidate set. Top-1 drops on colloquial and near-miss cases, which is exactly where a keyword system struggles. Only 1/20 labels clears the deliberately strict per-label gate, because the gate demands ≥95% precision *and* recall on rare classes — a bar the current weak-label data cannot meet. This is reported, not hidden.
+
+### 6.4 The solution / system delivered
+
+- **20-issue ontology**, citation normalizer, weak-labeling and split pipeline (reproducible).
+- **Two trained classifiers** with an honest comparison.
+- **Flask API** (`/api/health`, `/api/predict`) returning labels, per-issue model grid, and **full statute text**.
+- **Next.js + design-system frontend (LexTag)** — a bilingual "legal instrument" UI: scenario input, animated pipeline, ranked predictions with confidence bars, a 2-model comparison (line chart + matrix using real metrics), an explainability panel, a prominent *not-legal-advice* disclaimer, and — the key feature — **expandable cards showing the actual article text** for every supporting statute, not just the article number.
+
+Live demo examples (real API output): a drink-driving story returns `酒駕/公共危險` + the full text of 刑法 §185-3; a Threads-impersonation story returns `妨害名譽` + the full text of 刑法 §309, §310 and 民法 §195.
+
+---
+
+## 7. Discussion
+
+**What worked.** Framing the problem as *issue triage* (classification) instead of *legal QA* (generation) made it measurable, honest, and genuinely useful. The statute-text lookup turned "刑法 §185-3" from an opaque code into a verifiable clue. The two-model comparison surfaced a real, non-obvious ML lesson (Micro vs Macro under imbalance).
+
+**What was hard / where it fails.** The rule-based + TF-IDF stack is fundamentally limited by (1) **weak-label noise**, (2) **class imbalance** — the long tail is starved of data, and (3) **colloquial phrasing** — keyword matching misses paraphrases like "撞了就跑" for 肇事逃逸 or "借了不還" for 所有物返還. These cases return no prediction and correctly trigger the "needs review" flag rather than guessing.
+
+**I was wrong about two things.** First, I assumed the ML model would dominate the rule baseline everywhere — the Macro-F1 inversion proved otherwise. Second, I assumed more acceptance cases (1,000) implied more rigor — but because they cycle a few templates, the true linguistic coverage is modest, which is why the report says so explicitly.
+
+**Future work.** Manual gold-label annotation for the rare classes; fine-tune `hfl/chinese-macbert-base` with a sigmoid multi-label head to capture implied semantics; add out-of-distribution / "no legal issue" detection.
+
+---
+
+## 8. Conclusion
+
+LexTag is a reproducible Chinese-NLP pipeline that turns everyday legal narratives into multi-label issue predictions with citation-derived weak labels, compares a rule-based and a TF-IDF+SVM classifier with an honest analysis, and presents the result in an interactive demo that shows the **actual statute text** as a lookup clue. It is deliberately positioned as an upstream intake/routing aid — measurable, auditable, and free of legal-advice generation — which is precisely where it is most useful and least risky.
+
+---
+
+## 9. Reproducibility & Code
+
+```bash
+cd final_project
+uv sync --extra dev
+uv run python scripts/build_labels.py        # weak labels
+uv run python scripts/split_data.py          # train/val/test
+uv run python scripts/build_law_lookup.py    # statute text -> data/law_articles.json
+uv run python baselines/rule.py              # rule predictions
+uv run python baselines/tfidf_svm.py         # TF-IDF + SVM
+uv run python eval/metrics.py                # report/results.md
+uv run python eval/acceptance_suite.py       # 1,000-case acceptance
+uv run pytest                                 # 20 tests
+./start_demo.sh                               # Flask API + Next.js demo
+```
+
+Tests: **20 passed**. Pipeline and demo verified end-to-end.
+
+---
+
+## 10. References & Academic Integrity
+
+All implementation is the author's own work. External datasets, models, and products are cited below.
+
+**Datasets**
+
+- Huang, Liang-Hsun. `lianghsun/tw-legal-synthetic-qa`. Hugging Face.
+- Huang, Liang-Hsun. `lianghsun/tw-processed-law-article`. Hugging Face.
+
+**Libraries**
+
+- scikit-learn (TF-IDF, LinearSVC, metrics); jieba; Flask / flask-cors; PyYAML; Hugging Face `datasets`.
+- Next.js, React, TypeScript (frontend); Noto Serif/Sans TC + IBM Plex Mono (typography).
+
+**Related products (competitive context)**
+
+- Lawsnote · Lawbot AI · LawChat · EasyLaw · LawAI (法詢).
+
+**Statute text** is reproduced from public Republic of China (Taiwan) law via the `tw-processed-law-article` dataset, shown verbatim as a lookup clue only.

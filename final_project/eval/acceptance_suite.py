@@ -261,7 +261,9 @@ def write_report(metrics: dict, path: Path) -> None:
         "# Acceptance Test Results",
         "",
         "This acceptance suite is a deterministic, template-based demo regression set.",
-        "It contains 50 synthetic Chinese legal scenarios for each of the 20 labels.",
+        "It contains 50 cases for each of the 20 labels (1,000 total), but each label's",
+        "cases are cycled from only ~3-5 base phrasings across 4 difficulty splits, so the",
+        "linguistic diversity is far lower than the case count suggests.",
         "It should be treated as course-demo validation, not as an independent human-labeled benchmark.",
         "",
         "## Summary",
@@ -277,7 +279,9 @@ def write_report(metrics: dict, path: Path) -> None:
         "",
         "## By Scenario Type",
         "",
-        "| Split | Cases | Top-1 Accuracy | Top-3 Hit Rate | Recall |",
+        "Note: predictions are the merged top-5, so \"Recall\" below is recall@5.",
+        "",
+        "| Split | Cases | Top-1 Accuracy | Top-3 Hit Rate | Recall@5 |",
         "|---|---:|---:|---:|---:|",
     ]
     for split, row in metrics["by_split"].items():
@@ -291,7 +295,7 @@ def write_report(metrics: dict, path: Path) -> None:
             "",
             "## Per-label Results",
             "",
-            "| Label | Cases | Top-1 | Top-3 | Recall | Precision | Pass |",
+            "| Label | Cases | Top-1 | Top-3 | Recall@5 | Precision | Pass |",
             "|---|---:|---:|---:|---:|---:|---:|",
         ]
     )

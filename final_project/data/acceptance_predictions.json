@@ -1138,13 +1138,13 @@
     "split": "typical",
     "text": "店裡商品被客人偷拿。 朋友建議我先整理法律問題類型。",
     "predictions": [
-      "tort_damages",
-      "theft"
+      "theft",
+      "tort_damages"
     ],
-    "top1": "tort_damages",
+    "top1": "theft",
     "top3": [
-      "tort_damages",
-      "theft"
+      "theft",
+      "tort_damages"
     ],
     "matched_keywords": [
       "偷"
@@ -1395,13 +1395,13 @@
     "split": "typical",
     "text": "店裡商品被客人偷拿。 朋友建議我先整理法律問題類型。",
     "predictions": [
-      "tort_damages",
-      "theft"
+      "theft",
+      "tort_damages"
     ],
-    "top1": "tort_damages",
+    "top1": "theft",
     "top3": [
-      "tort_damages",
-      "theft"
+      "theft",
+      "tort_damages"
     ],
     "matched_keywords": [
       "偷"
@@ -1898,13 +1898,13 @@
     "split": "typical",
     "text": "竊賊夜間破窗進屋。 我需要把這件事描述給法律服務窗口。",
     "predictions": [
-      "tort_damages",
-      "aggravated_theft"
+      "aggravated_theft",
+      "tort_damages"
     ],
-    "top1": "tort_damages",
+    "top1": "aggravated_theft",
     "top3": [
-      "tort_damages",
-      "aggravated_theft"
+      "aggravated_theft",
+      "tort_damages"
     ],
     "matched_keywords": [
       "夜間"
@@ -2080,13 +2080,13 @@
     "split": "typical",
     "text": "竊賊夜間破窗進屋。 朋友建議我先整理法律問題類型。",
     "predictions": [
-      "tort_damages",
-      "aggravated_theft"
+      "aggravated_theft",
+      "tort_damages"
     ],
-    "top1": "tort_damages",
+    "top1": "aggravated_theft",
     "top3": [
-      "tort_damages",
-      "aggravated_theft"
+      "aggravated_theft",
+      "tort_damages"
     ],
     "matched_keywords": [
       "夜間"
@@ -2202,13 +2202,13 @@
     "split": "typical",
     "text": "竊賊夜間破窗進屋。 我需要把這件事描述給法律服務窗口。",
     "predictions": [
-      "tort_damages",
-      "aggravated_theft"
+      "aggravated_theft",
+      "tort_damages"
     ],
-    "top1": "tort_damages",
+    "top1": "aggravated_theft",
     "top3": [
-      "tort_damages",
-      "aggravated_theft"
+      "aggravated_theft",
+      "tort_damages"
     ],
     "matched_keywords": [
       "夜間"
@@ -2384,13 +2384,13 @@
     "split": "typical",
     "text": "竊賊夜間破窗進屋。 朋友建議我先整理法律問題類型。",
     "predictions": [
-      "tort_damages",
-      "aggravated_theft"
+      "aggravated_theft",
+      "tort_damages"
     ],
-    "top1": "tort_damages",
+    "top1": "aggravated_theft",
     "top3": [
-      "tort_damages",
-      "aggravated_theft"
+      "aggravated_theft",
+      "tort_damages"
     ],
     "matched_keywords": [
       "夜間"

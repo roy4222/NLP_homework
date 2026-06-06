@@ -1,0 +1,10 @@
+# Lean runtime deps for serving the prediction API (no datasets/matplotlib/pandas).
+# Used by the Docker image. The TF-IDF+SVM model is rebuilt at image-build time
+# from the committed data/train.jsonl, so no Hugging Face download is needed.
+flask>=3.0
+flask-cors>=4.0
+scikit-learn>=1.5
+numpy>=1.26
+joblib>=1.4
+pyyaml>=6.0
+gunicorn>=22.0

@@ -25,3 +25,6 @@ final_project/web/out/
 
 # stray file at repo root (week05 has its own copy)
 /similarity_comparison.png
+
+# Windows alternate-data-stream junk
+*:Zone.Identifier
