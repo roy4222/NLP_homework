@@ -33,6 +33,19 @@ uv run python eval/metrics.py
 uv run python api/app.py
 ```
 
+## Start the Interactive Demo
+
+From WSL:
+
+```bash
+cd /home/roy422/NLP_homework/final_project
+./start_demo.sh
+```
+
+The script starts both services and prints the frontend URL. It defaults to
+`http://127.0.0.1:3000`, but automatically moves to the next free port if 3000
+is already in use.
+
 ## Disclaimer
 
 This project performs legal issue triage for NLP education. It does not provide legal advice.
