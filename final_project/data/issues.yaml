@@ -1,0 +1,213 @@
+- id: dui_public_danger
+  name_zh: 酒駕 / 公共危險
+  name_en: DUI / public danger
+  category: criminal
+  laws:
+    - law: 刑法
+      article: "185-3"
+  aliases: [酒駕, 酒後駕車, 公共危險]
+  keywords: [酒測, 酒精濃度, 醉, 開車, 機車]
+
+- id: theft
+  name_zh: 竊盜
+  name_en: theft
+  category: criminal
+  laws:
+    - law: 刑法
+      article: "320"
+  aliases: [竊盜, 偷竊, 偷東西]
+  keywords: [偷, 竊取, 拿走, 財物]
+
+- id: aggravated_theft
+  name_zh: 加重竊盜
+  name_en: aggravated theft
+  category: criminal
+  laws:
+    - law: 刑法
+      article: "321"
+  aliases: [加重竊盜, 侵入住宅竊盜]
+  keywords: [侵入住宅, 夜間, 結夥, 撬門]
+
+- id: fraud
+  name_zh: 詐欺
+  name_en: fraud
+  category: criminal
+  laws:
+    - law: 刑法
+      article: "339"
+  aliases: [詐欺, 詐騙, 騙錢]
+  keywords: [騙, 匯款, 投資, 網購, 封鎖]
+
+- id: injury
+  name_zh: 傷害
+  name_en: injury
+  category: criminal
+  laws:
+    - law: 刑法
+      article: "277"
+  aliases: [傷害, 打傷, 毆打]
+  keywords: [打, 受傷, 驗傷, 骨折]
+
+- id: negligent_injury
+  name_zh: 過失傷害
+  name_en: negligent injury
+  category: criminal
+  laws:
+    - law: 刑法
+      article: "284"
+  aliases: [過失傷害, 車禍受傷]
+  keywords: [車禍, 不小心, 過失, 撞傷]
+
+- id: negligent_death
+  name_zh: 過失致死
+  name_en: negligent homicide
+  category: criminal
+  laws:
+    - law: 刑法
+      article: "276"
+  aliases: [過失致死, 過失致人於死]
+  keywords: [死亡, 致死, 過失, 車禍死亡]
+
+- id: hit_and_run
+  name_zh: 肇事逃逸
+  name_en: hit and run
+  category: criminal
+  laws:
+    - law: 刑法
+      article: "185-4"
+  aliases: [肇事逃逸, 撞人逃逸]
+  keywords: [逃逸, 離開現場, 肇事, 撞到人]
+
+- id: property_damage
+  name_zh: 毀損
+  name_en: property damage
+  category: criminal
+  laws:
+    - law: 刑法
+      article: "354"
+  aliases: [毀損, 破壞財物]
+  keywords: [砸, 破壞, 損壞, 刮車]
+
+- id: document_forgery
+  name_zh: 偽造文書
+  name_en: document forgery
+  category: criminal
+  laws:
+    - law: 刑法
+      article: "210"
+  aliases: [偽造文書, 偽造私文書]
+  keywords: [偽造, 簽名, 文件, 印章]
+
+- id: defamation
+  name_zh: 妨害名譽 / 誹謗
+  name_en: defamation
+  category: criminal
+  laws:
+    - law: 刑法
+      article: "309"
+    - law: 刑法
+      article: "310"
+    - law: 民法
+      article: "195"
+  aliases: [妨害名譽, 誹謗, 公然侮辱]
+  keywords: [辱罵, 爆料, 貼文, 名譽, 社群]
+
+- id: intimidation
+  name_zh: 恐嚇
+  name_en: intimidation
+  category: criminal
+  laws:
+    - law: 刑法
+      article: "305"
+  aliases: [恐嚇, 威脅]
+  keywords: [威脅, 恐嚇, 要殺, 害怕]
+
+- id: tort_damages
+  name_zh: 侵權行為損害賠償
+  name_en: tort damages
+  category: civil
+  laws:
+    - law: 民法
+      article: "184"
+    - law: 民法
+      article: "193"
+    - law: 民法
+      article: "195"
+  aliases: [侵權行為, 損害賠償, 精神慰撫金]
+  keywords: [賠償, 精神損害, 損害, 慰撫金]
+
+- id: divorce
+  name_zh: 離婚
+  name_en: divorce
+  category: civil
+  laws:
+    - law: 民法
+      article: "1052"
+  aliases: [離婚, 裁判離婚]
+  keywords: [配偶, 婚姻, 分居, 外遇]
+
+- id: unjust_enrichment
+  name_zh: 不當得利
+  name_en: unjust enrichment
+  category: civil
+  laws:
+    - law: 民法
+      article: "179"
+  aliases: [不當得利, 無法律上原因]
+  keywords: [多收, 誤匯, 返還, 得利]
+
+- id: contract_breach
+  name_zh: 契約違約 / 債務不履行
+  name_en: contract breach
+  category: civil
+  laws:
+    - law: 民法
+      article: "226"
+    - law: 民法
+      article: "227"
+  aliases: [違約, 債務不履行, 契約不履行]
+  keywords: [合約, 契約, 沒履行, 遲延, 解約]
+
+- id: sales_defect
+  name_zh: 買賣瑕疵
+  name_en: sales defect
+  category: civil
+  laws:
+    - law: 民法
+      article: "354"
+    - law: 民法
+      article: "359"
+    - law: 民法
+      article: "360"
+  aliases: [物之瑕疵, 買賣瑕疵]
+  keywords: [瑕疵, 退貨, 減價, 保固]
+
+- id: inheritance
+  name_zh: 繼承
+  name_en: inheritance
+  category: civil
+  laws:
+    - law: 民法
+      article: "1138"
+  aliases: [繼承, 繼承人]
+  keywords: [遺產, 遺囑, 叔伯, 子女, 父母]
+
+- id: marital_property
+  name_zh: 夫妻剩餘財產分配
+  name_en: marital property
+  category: civil
+  laws:
+    - law: 民法
+      article: "1030-1"
+  aliases: [剩餘財產分配, 夫妻財產]
+  keywords: [婚後財產, 財產分配, 離婚財產]
+
+- id: property_return
+  name_zh: 所有物返還 / 返還請求
+  name_en: property return
+  category: civil
+  laws:
+    - law: 民法
+      article: "767"
+  aliases: [所有物返還, 返還請求]
+  keywords: [返還, 占有, 拿回, 借用不還]

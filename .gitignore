@@ -1,6 +1,7 @@
 .venv/
 __pycache__/
 *.pyc
+.pytest_cache/
 .ipynb_checkpoints/
 
 # macOS
@@ -12,7 +13,13 @@ final_project/data/hf_cache/
 final_project/data/raw/
 final_project/models/**/checkpoint-*/
 final_project/models/**/*.pt
+final_project/models/**/*.bin
 final_project/models/**/*.safetensors
+final_project/data/*.joblib
+final_project/external/
+final_project/web/.next/
+final_project/web/node_modules/
+final_project/web/out/
 .hf_token
 .env
 

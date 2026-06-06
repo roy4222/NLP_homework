@@ -1,0 +1,98 @@
+name: Final Project CI
+
+on:
+  push:
+    paths:
+      - "final_project/**"
+      - ".github/workflows/final-project-ci.yml"
+  pull_request:
+    paths:
+      - "final_project/**"
+      - ".github/workflows/final-project-ci.yml"
+
+jobs:
+  python-tests:
+    name: Python tests
+    runs-on: ubuntu-latest
+    env:
+      UV_PYTHON_DOWNLOADS: never
+    defaults:
+      run:
+        working-directory: final_project
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install Python dependencies
+        run: uv sync --extra dev
+
+      - name: Run Python tests
+        run: uv run pytest -v
+
+      - name: Upload report artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: final-project-report
+          path: |
+            final_project/report/*.md
+            final_project/data/stats.md
+
+  frontend-build:
+    name: Frontend build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Detect frontend package
+        id: web
+        shell: bash
+        run: |
+          if [ -f final_project/web/package.json ]; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up Node
+        if: steps.web.outputs.exists == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install frontend dependencies
+        if: steps.web.outputs.exists == 'true'
+        working-directory: final_project/web
+        run: npm ci
+
+      - name: Audit frontend dependencies
+        if: steps.web.outputs.exists == 'true'
+        working-directory: final_project/web
+        run: npm audit --audit-level=high
+
+      - name: Lint frontend
+        if: steps.web.outputs.exists == 'true'
+        working-directory: final_project/web
+        run: npm run lint
+
+      - name: Build frontend
+        if: steps.web.outputs.exists == 'true'
+        working-directory: final_project/web
+        run: npm run build
+
+      - name: Upload frontend build metadata
+        if: steps.web.outputs.exists == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: final-project-frontend-build
+          path: |
+            final_project/web/.next/routes-manifest.json
+            final_project/web/.next/build-manifest.json

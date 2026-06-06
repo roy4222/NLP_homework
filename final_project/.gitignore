@@ -1,0 +1,14 @@
+data/raw/
+data/hf_cache/
+data/*.joblib
+external/
+.pytest_cache/
+models/**/checkpoint-*/
+models/**/*.pt
+models/**/*.bin
+models/**/*.safetensors
+web/.next/
+web/node_modules/
+web/out/
+.env
+.hf_token
