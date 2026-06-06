@@ -1,0 +1,10 @@
+{
+  // Cloudflare Workers static-assets config for the LexTag frontend.
+  // The Flask ML backend CANNOT run on Workers — host it elsewhere and set
+  // NEXT_PUBLIC_API_BASE_URL at build time so the static site calls it.
+  "name": "lextag-demo",
+  "compatibility_date": "2025-01-01",
+  "assets": {
+    "directory": "./out"
+  }
+}

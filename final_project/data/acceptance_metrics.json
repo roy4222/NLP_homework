@@ -1,0 +1,276 @@
+{
+  "total_cases": 1000,
+  "label_count": 20,
+  "passed_labels": 1,
+  "top1_accuracy": 0.8,
+  "top3_hit_rate": 0.962,
+  "recall": 0.962,
+  "per_label": {
+    "dui_public_danger": {
+      "cases": 50,
+      "top1_accuracy": 1.0,
+      "top3_hit_rate": 1.0,
+      "recall": 1.0,
+      "precision": 0.5882352941176471,
+      "top1_hits": 50,
+      "top3_hits": 50,
+      "recall_hits": 50,
+      "predicted_count": 85,
+      "passed": false
+    },
+    "theft": {
+      "cases": 50,
+      "top1_accuracy": 0.9,
+      "top3_hit_rate": 1.0,
+      "recall": 1.0,
+      "precision": 0.4166666666666667,
+      "top1_hits": 45,
+      "top3_hits": 50,
+      "recall_hits": 50,
+      "predicted_count": 120,
+      "passed": false
+    },
+    "aggravated_theft": {
+      "cases": 50,
+      "top1_accuracy": 0.3,
+      "top3_hit_rate": 0.9,
+      "recall": 0.9,
+      "precision": 1.0,
+      "top1_hits": 15,
+      "top3_hits": 45,
+      "recall_hits": 45,
+      "predicted_count": 45,
+      "passed": false
+    },
+    "fraud": {
+      "cases": 50,
+      "top1_accuracy": 0.9,
+      "top3_hit_rate": 1.0,
+      "recall": 1.0,
+      "precision": 0.5882352941176471,
+      "top1_hits": 45,
+      "top3_hits": 50,
+      "recall_hits": 50,
+      "predicted_count": 85,
+      "passed": false
+    },
+    "injury": {
+      "cases": 50,
+      "top1_accuracy": 1.0,
+      "top3_hit_rate": 1.0,
+      "recall": 1.0,
+      "precision": 0.5555555555555556,
+      "top1_hits": 50,
+      "top3_hits": 50,
+      "recall_hits": 50,
+      "predicted_count": 90,
+      "passed": false
+    },
+    "negligent_injury": {
+      "cases": 50,
+      "top1_accuracy": 0.46,
+      "top3_hit_rate": 1.0,
+      "recall": 1.0,
+      "precision": 0.4,
+      "top1_hits": 23,
+      "top3_hits": 50,
+      "recall_hits": 50,
+      "predicted_count": 125,
+      "passed": false
+    },
+    "negligent_death": {
+      "cases": 50,
+      "top1_accuracy": 0.8,
+      "top3_hit_rate": 0.9,
+      "recall": 0.9,
+      "precision": 0.5294117647058824,
+      "top1_hits": 40,
+      "top3_hits": 45,
+      "recall_hits": 45,
+      "predicted_count": 85,
+      "passed": false
+    },
+    "hit_and_run": {
+      "cases": 50,
+      "top1_accuracy": 0.8,
+      "top3_hit_rate": 0.9,
+      "recall": 0.9,
+      "precision": 0.9,
+      "top1_hits": 40,
+      "top3_hits": 45,
+      "recall_hits": 45,
+      "predicted_count": 50,
+      "passed": false
+    },
+    "property_damage": {
+      "cases": 50,
+      "top1_accuracy": 0.7,
+      "top3_hit_rate": 0.9,
+      "recall": 0.9,
+      "precision": 0.9,
+      "top1_hits": 35,
+      "top3_hits": 45,
+      "recall_hits": 45,
+      "predicted_count": 50,
+      "passed": false
+    },
+    "document_forgery": {
+      "cases": 50,
+      "top1_accuracy": 0.8,
+      "top3_hit_rate": 1.0,
+      "recall": 1.0,
+      "precision": 1.0,
+      "top1_hits": 40,
+      "top3_hits": 50,
+      "recall_hits": 50,
+      "predicted_count": 50,
+      "passed": false
+    },
+    "defamation": {
+      "cases": 50,
+      "top1_accuracy": 1.0,
+      "top3_hit_rate": 1.0,
+      "recall": 1.0,
+      "precision": 0.7692307692307693,
+      "top1_hits": 50,
+      "top3_hits": 50,
+      "recall_hits": 50,
+      "predicted_count": 65,
+      "passed": false
+    },
+    "intimidation": {
+      "cases": 50,
+      "top1_accuracy": 0.9,
+      "top3_hit_rate": 1.0,
+      "recall": 1.0,
+      "precision": 0.9090909090909091,
+      "top1_hits": 45,
+      "top3_hits": 50,
+      "recall_hits": 50,
+      "predicted_count": 55,
+      "passed": false
+    },
+    "tort_damages": {
+      "cases": 50,
+      "top1_accuracy": 0.94,
+      "top3_hit_rate": 0.94,
+      "recall": 0.94,
+      "precision": 0.7833333333333333,
+      "top1_hits": 47,
+      "top3_hits": 47,
+      "recall_hits": 47,
+      "predicted_count": 60,
+      "passed": false
+    },
+    "divorce": {
+      "cases": 50,
+      "top1_accuracy": 1.0,
+      "top3_hit_rate": 1.0,
+      "recall": 1.0,
+      "precision": 0.5882352941176471,
+      "top1_hits": 50,
+      "top3_hits": 50,
+      "recall_hits": 50,
+      "predicted_count": 85,
+      "passed": false
+    },
+    "unjust_enrichment": {
+      "cases": 50,
+      "top1_accuracy": 0.9,
+      "top3_hit_rate": 1.0,
+      "recall": 1.0,
+      "precision": 0.5882352941176471,
+      "top1_hits": 45,
+      "top3_hits": 50,
+      "recall_hits": 50,
+      "predicted_count": 85,
+      "passed": false
+    },
+    "contract_breach": {
+      "cases": 50,
+      "top1_accuracy": 0.9,
+      "top3_hit_rate": 1.0,
+      "recall": 1.0,
+      "precision": 0.625,
+      "top1_hits": 45,
+      "top3_hits": 50,
+      "recall_hits": 50,
+      "predicted_count": 80,
+      "passed": false
+    },
+    "sales_defect": {
+      "cases": 50,
+      "top1_accuracy": 0.8,
+      "top3_hit_rate": 0.9,
+      "recall": 0.9,
+      "precision": 0.8181818181818182,
+      "top1_hits": 40,
+      "top3_hits": 45,
+      "recall_hits": 45,
+      "predicted_count": 55,
+      "passed": false
+    },
+    "inheritance": {
+      "cases": 50,
+      "top1_accuracy": 1.0,
+      "top3_hit_rate": 1.0,
+      "recall": 1.0,
+      "precision": 0.9090909090909091,
+      "top1_hits": 50,
+      "top3_hits": 50,
+      "recall_hits": 50,
+      "predicted_count": 55,
+      "passed": true
+    },
+    "marital_property": {
+      "cases": 50,
+      "top1_accuracy": 0.5,
+      "top3_hit_rate": 0.9,
+      "recall": 0.9,
+      "precision": 0.75,
+      "top1_hits": 25,
+      "top3_hits": 45,
+      "recall_hits": 45,
+      "predicted_count": 60,
+      "passed": false
+    },
+    "property_return": {
+      "cases": 50,
+      "top1_accuracy": 0.4,
+      "top3_hit_rate": 0.9,
+      "recall": 0.9,
+      "precision": 0.6923076923076923,
+      "top1_hits": 20,
+      "top3_hits": 45,
+      "recall_hits": 45,
+      "predicted_count": 65,
+      "passed": false
+    }
+  },
+  "by_split": {
+    "typical": {
+      "cases": 600,
+      "top1_accuracy": 0.8666666666666667,
+      "top3_hit_rate": 1.0,
+      "recall": 1.0
+    },
+    "colloquial": {
+      "cases": 200,
+      "top1_accuracy": 0.735,
+      "top3_hit_rate": 0.81,
+      "recall": 0.81
+    },
+    "ambiguous": {
+      "cases": 100,
+      "top1_accuracy": 0.73,
+      "top3_hit_rate": 1.0,
+      "recall": 1.0
+    },
+    "near_miss": {
+      "cases": 100,
+      "top1_accuracy": 0.6,
+      "top3_hit_rate": 1.0,
+      "recall": 1.0
+    }
+  }
+}

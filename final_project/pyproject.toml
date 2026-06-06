@@ -1,0 +1,27 @@
+[project]
+name = "legal-issue-triage"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "datasets>=4.0",
+    "flask>=3.0",
+    "flask-cors>=4.0",
+    "jieba>=0.42",
+    "joblib>=1.4",
+    "matplotlib>=3.8",
+    "numpy>=1.26",
+    "pandas>=2.0",
+    "pyyaml>=6.0",
+    "scikit-learn>=1.5",
+    "seaborn>=0.13",
+    "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+serve = ["gunicorn>=22.0"]
+bert = ["torch>=2.2", "transformers>=4.40", "accelerate>=0.30"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

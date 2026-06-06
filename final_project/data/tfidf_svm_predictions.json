@@ -1,0 +1,2001 @@
+[
+  {
+    "id": "synthetic-813",
+    "gold": [
+      "contract_breach"
+    ],
+    "predicted": [
+      "sales_defect"
+    ]
+  },
+  {
+    "id": "synthetic-8247",
+    "gold": [
+      "intimidation"
+    ],
+    "predicted": [
+      "divorce"
+    ]
+  },
+  {
+    "id": "synthetic-995",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-142",
+    "gold": [
+      "defamation"
+    ],
+    "predicted": [
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-9428",
+    "gold": [
+      "divorce"
+    ],
+    "predicted": [
+      "divorce"
+    ]
+  },
+  {
+    "id": "synthetic-7739",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-3245",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": [
+      "fraud",
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-7320",
+    "gold": [
+      "negligent_injury"
+    ],
+    "predicted": [
+      "negligent_injury"
+    ]
+  },
+  {
+    "id": "synthetic-7737",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-348",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-4397",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-904",
+    "gold": [
+      "theft"
+    ],
+    "predicted": [
+      "theft"
+    ]
+  },
+  {
+    "id": "synthetic-3166",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-3379",
+    "gold": [
+      "fraud"
+    ],
+    "predicted": [
+      "fraud"
+    ]
+  },
+  {
+    "id": "synthetic-1699",
+    "gold": [
+      "defamation"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-5955",
+    "gold": [
+      "defamation",
+      "tort_damages"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-6762",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-5764",
+    "gold": [
+      "negligent_injury"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-4842",
+    "gold": [
+      "injury"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-8857",
+    "gold": [
+      "theft",
+      "tort_damages"
+    ],
+    "predicted": [
+      "theft"
+    ]
+  },
+  {
+    "id": "synthetic-4086",
+    "gold": [
+      "negligent_injury"
+    ],
+    "predicted": [
+      "negligent_injury"
+    ]
+  },
+  {
+    "id": "synthetic-2763",
+    "gold": [
+      "divorce"
+    ],
+    "predicted": [
+      "divorce"
+    ]
+  },
+  {
+    "id": "synthetic-8553",
+    "gold": [
+      "sales_defect"
+    ],
+    "predicted": [
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-2998",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-5539",
+    "gold": [
+      "aggravated_theft"
+    ],
+    "predicted": [
+      "theft"
+    ]
+  },
+  {
+    "id": "synthetic-7938",
+    "gold": [
+      "marital_property"
+    ],
+    "predicted": [
+      "divorce"
+    ]
+  },
+  {
+    "id": "synthetic-6919",
+    "gold": [
+      "injury"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-8977",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-2345",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-7285",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": [
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-6226",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": [
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-1828",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-1802",
+    "gold": [
+      "negligent_injury"
+    ],
+    "predicted": [
+      "negligent_injury"
+    ]
+  },
+  {
+    "id": "synthetic-6960",
+    "gold": [
+      "unjust_enrichment"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-966",
+    "gold": [
+      "injury",
+      "property_damage"
+    ],
+    "predicted": [
+      "injury"
+    ]
+  },
+  {
+    "id": "synthetic-6379",
+    "gold": [
+      "theft"
+    ],
+    "predicted": [
+      "theft"
+    ]
+  },
+  {
+    "id": "synthetic-1163",
+    "gold": [
+      "sales_defect"
+    ],
+    "predicted": [
+      "contract_breach"
+    ]
+  },
+  {
+    "id": "synthetic-9454",
+    "gold": [
+      "sales_defect"
+    ],
+    "predicted": [
+      "sales_defect"
+    ]
+  },
+  {
+    "id": "synthetic-8927",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-3334",
+    "gold": [
+      "property_damage"
+    ],
+    "predicted": [
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-809",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-3325",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-4031",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-4700",
+    "gold": [
+      "fraud"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-1573",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": [
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-308",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-6407",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-4243",
+    "gold": [
+      "property_damage"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-7854",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-15",
+    "gold": [
+      "negligent_injury"
+    ],
+    "predicted": [
+      "negligent_injury"
+    ]
+  },
+  {
+    "id": "synthetic-6940",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-7079",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-2320",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-4852",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-8803",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-9475",
+    "gold": [
+      "theft"
+    ],
+    "predicted": [
+      "theft"
+    ]
+  },
+  {
+    "id": "synthetic-9038",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-8621",
+    "gold": [
+      "aggravated_theft"
+    ],
+    "predicted": [
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-8403",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-3900",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-8169",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": [
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-1480",
+    "gold": [
+      "unjust_enrichment"
+    ],
+    "predicted": [
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-6640",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-2491",
+    "gold": [
+      "fraud"
+    ],
+    "predicted": [
+      "fraud"
+    ]
+  },
+  {
+    "id": "synthetic-6563",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-3516",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-66",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": [
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-5980",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-2308",
+    "gold": [
+      "defamation"
+    ],
+    "predicted": [
+      "defamation"
+    ]
+  },
+  {
+    "id": "synthetic-5702",
+    "gold": [
+      "fraud",
+      "tort_damages"
+    ],
+    "predicted": [
+      "fraud"
+    ]
+  },
+  {
+    "id": "synthetic-3835",
+    "gold": [
+      "negligent_injury"
+    ],
+    "predicted": [
+      "negligent_injury"
+    ]
+  },
+  {
+    "id": "synthetic-9619",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-9369",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-8417",
+    "gold": [
+      "injury"
+    ],
+    "predicted": [
+      "injury"
+    ]
+  },
+  {
+    "id": "synthetic-9070",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-7020",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-1601",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-199",
+    "gold": [
+      "divorce"
+    ],
+    "predicted": [
+      "divorce"
+    ]
+  },
+  {
+    "id": "synthetic-7319",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-3414",
+    "gold": [
+      "negligent_injury"
+    ],
+    "predicted": [
+      "negligent_injury"
+    ]
+  },
+  {
+    "id": "synthetic-6928",
+    "gold": [
+      "divorce"
+    ],
+    "predicted": [
+      "divorce"
+    ]
+  },
+  {
+    "id": "synthetic-6150",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-7832",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-4966",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-5009",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-900",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-7845",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-9591",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-2316",
+    "gold": [
+      "negligent_death"
+    ],
+    "predicted": [
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-8197",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": [
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-2232",
+    "gold": [
+      "sales_defect"
+    ],
+    "predicted": [
+      "sales_defect"
+    ]
+  },
+  {
+    "id": "synthetic-1537",
+    "gold": [
+      "unjust_enrichment"
+    ],
+    "predicted": [
+      "theft"
+    ]
+  },
+  {
+    "id": "synthetic-655",
+    "gold": [
+      "sales_defect"
+    ],
+    "predicted": [
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-1246",
+    "gold": [
+      "intimidation"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-6474",
+    "gold": [
+      "negligent_death"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-6673",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-2008",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-8978",
+    "gold": [
+      "unjust_enrichment"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-4689",
+    "gold": [
+      "negligent_injury"
+    ],
+    "predicted": [
+      "negligent_injury"
+    ]
+  },
+  {
+    "id": "synthetic-5182",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-7686",
+    "gold": [
+      "injury"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-5581",
+    "gold": [
+      "divorce"
+    ],
+    "predicted": [
+      "divorce"
+    ]
+  },
+  {
+    "id": "synthetic-7699",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-3509",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-7076",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-9487",
+    "gold": [
+      "negligent_injury"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-3365",
+    "gold": [
+      "negligent_death",
+      "negligent_injury"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-9598",
+    "gold": [
+      "theft"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-3553",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-2057",
+    "gold": [
+      "fraud"
+    ],
+    "predicted": [
+      "fraud",
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-6019",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-8432",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": [
+      "theft",
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-5144",
+    "gold": [
+      "injury"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-6532",
+    "gold": [
+      "injury"
+    ],
+    "predicted": [
+      "injury"
+    ]
+  },
+  {
+    "id": "synthetic-8541",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-3003",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-4114",
+    "gold": [
+      "injury"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-7488",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-2978",
+    "gold": [
+      "divorce"
+    ],
+    "predicted": [
+      "divorce"
+    ]
+  },
+  {
+    "id": "synthetic-930",
+    "gold": [
+      "negligent_death"
+    ],
+    "predicted": [
+      "dui_public_danger",
+      "negligent_injury"
+    ]
+  },
+  {
+    "id": "synthetic-3579",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-5212",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-4116",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-9535",
+    "gold": [
+      "theft"
+    ],
+    "predicted": [
+      "theft"
+    ]
+  },
+  {
+    "id": "synthetic-3238",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-781",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-4249",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-8893",
+    "gold": [
+      "negligent_injury"
+    ],
+    "predicted": [
+      "negligent_injury"
+    ]
+  },
+  {
+    "id": "synthetic-3114",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-7364",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": [
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-8919",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-8410",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-3594",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-4913",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": [
+      "theft"
+    ]
+  },
+  {
+    "id": "synthetic-6063",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-2339",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-9603",
+    "gold": [
+      "contract_breach"
+    ],
+    "predicted": [
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-6987",
+    "gold": [
+      "injury"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-2402",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-8343",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-7959",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-997",
+    "gold": [
+      "document_forgery"
+    ],
+    "predicted": [
+      "fraud"
+    ]
+  },
+  {
+    "id": "synthetic-8469",
+    "gold": [
+      "theft"
+    ],
+    "predicted": [
+      "theft"
+    ]
+  },
+  {
+    "id": "synthetic-8885",
+    "gold": [
+      "hit_and_run",
+      "negligent_death"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-9057",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-3569",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-8745",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-2935",
+    "gold": [
+      "theft",
+      "tort_damages"
+    ],
+    "predicted": [
+      "theft"
+    ]
+  },
+  {
+    "id": "synthetic-4613",
+    "gold": [
+      "fraud"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-4810",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": [
+      "fraud",
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-2332",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-4720",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-8345",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-5962",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-9364",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-9341",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-1429",
+    "gold": [
+      "property_damage",
+      "tort_damages"
+    ],
+    "predicted": [
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-9510",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-1073",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-3800",
+    "gold": [
+      "divorce"
+    ],
+    "predicted": [
+      "divorce"
+    ]
+  },
+  {
+    "id": "synthetic-3180",
+    "gold": [
+      "unjust_enrichment"
+    ],
+    "predicted": [
+      "fraud",
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-8592",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-638",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-979",
+    "gold": [
+      "negligent_injury"
+    ],
+    "predicted": [
+      "negligent_injury"
+    ]
+  },
+  {
+    "id": "synthetic-9082",
+    "gold": [
+      "theft"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-2644",
+    "gold": [
+      "theft"
+    ],
+    "predicted": [
+      "theft"
+    ]
+  },
+  {
+    "id": "synthetic-7594",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-4685",
+    "gold": [
+      "negligent_injury"
+    ],
+    "predicted": [
+      "negligent_injury"
+    ]
+  },
+  {
+    "id": "synthetic-8107",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-8211",
+    "gold": [
+      "theft"
+    ],
+    "predicted": [
+      "theft"
+    ]
+  },
+  {
+    "id": "synthetic-3832",
+    "gold": [
+      "negligent_injury"
+    ],
+    "predicted": [
+      "negligent_injury"
+    ]
+  },
+  {
+    "id": "synthetic-7308",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-1071",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": [
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-4910",
+    "gold": [
+      "injury"
+    ],
+    "predicted": [
+      "injury"
+    ]
+  },
+  {
+    "id": "synthetic-1799",
+    "gold": [
+      "fraud"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-7017",
+    "gold": [
+      "fraud"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-6020",
+    "gold": [
+      "negligent_injury"
+    ],
+    "predicted": [
+      "negligent_injury"
+    ]
+  },
+  {
+    "id": "synthetic-606",
+    "gold": [
+      "injury"
+    ],
+    "predicted": [
+      "injury"
+    ]
+  },
+  {
+    "id": "synthetic-3541",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-7915",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-4487",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-4647",
+    "gold": [
+      "unjust_enrichment"
+    ],
+    "predicted": [
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-1311",
+    "gold": [
+      "theft",
+      "tort_damages"
+    ],
+    "predicted": [
+      "theft"
+    ]
+  },
+  {
+    "id": "synthetic-4921",
+    "gold": [
+      "fraud"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-1252",
+    "gold": [
+      "injury"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-9574",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-4363",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-3031",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-2274",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-9414",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-4462",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-5530",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-9011",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-2313",
+    "gold": [
+      "negligent_injury"
+    ],
+    "predicted": [
+      "negligent_injury"
+    ]
+  },
+  {
+    "id": "synthetic-138",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-3684",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-7742",
+    "gold": [
+      "negligent_injury"
+    ],
+    "predicted": [
+      "negligent_injury"
+    ]
+  },
+  {
+    "id": "synthetic-5931",
+    "gold": [
+      "injury"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-3128",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-5468",
+    "gold": [
+      "defamation",
+      "tort_damages"
+    ],
+    "predicted": [
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-9562",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-9048",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-8503",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-9278",
+    "gold": [
+      "theft"
+    ],
+    "predicted": [
+      "theft"
+    ]
+  },
+  {
+    "id": "synthetic-2745",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-7414",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": [
+      "divorce",
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-396",
+    "gold": [
+      "hit_and_run"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-7894",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-6610",
+    "gold": [
+      "theft"
+    ],
+    "predicted": [
+      "theft"
+    ]
+  },
+  {
+    "id": "synthetic-3264",
+    "gold": [
+      "dui_public_danger",
+      "negligent_injury"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-3106",
+    "gold": [
+      "aggravated_theft"
+    ],
+    "predicted": [
+      "fraud"
+    ]
+  },
+  {
+    "id": "synthetic-1266",
+    "gold": [
+      "fraud"
+    ],
+    "predicted": [
+      "fraud"
+    ]
+  },
+  {
+    "id": "synthetic-468",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-500",
+    "gold": [
+      "property_damage"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-5516",
+    "gold": [
+      "intimidation"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-7760",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-1191",
+    "gold": [
+      "property_damage"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-7227",
+    "gold": [
+      "defamation",
+      "intimidation"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-8805",
+    "gold": [
+      "fraud"
+    ],
+    "predicted": [
+      "theft"
+    ]
+  },
+  {
+    "id": "synthetic-1450",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-9544",
+    "gold": [
+      "fraud"
+    ],
+    "predicted": [
+      "fraud"
+    ]
+  },
+  {
+    "id": "synthetic-2021",
+    "gold": [
+      "theft"
+    ],
+    "predicted": [
+      "theft"
+    ]
+  },
+  {
+    "id": "synthetic-3156",
+    "gold": [
+      "negligent_injury"
+    ],
+    "predicted": [
+      "negligent_injury"
+    ]
+  },
+  {
+    "id": "synthetic-3353",
+    "gold": [
+      "tort_damages"
+    ],
+    "predicted": [
+      "tort_damages"
+    ]
+  },
+  {
+    "id": "synthetic-3659",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-9604",
+    "gold": [
+      "dui_public_danger"
+    ],
+    "predicted": [
+      "dui_public_danger"
+    ]
+  },
+  {
+    "id": "synthetic-387",
+    "gold": [
+      "intimidation"
+    ],
+    "predicted": []
+  },
+  {
+    "id": "synthetic-1568",
+    "gold": [
+      "negligent_injury"
+    ],
+    "predicted": [
+      "negligent_injury"
+    ]
+  },
+  {
+    "id": "synthetic-8407",
+    "gold": [
+      "injury",
+      "tort_damages"
+    ],
+    "predicted": []
+  }
+]
